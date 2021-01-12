@@ -2,6 +2,6 @@
 
 @section('content')
 
-  @include('Admin.master.content')
+    @include('Admin.master.content')
 
 @endsection

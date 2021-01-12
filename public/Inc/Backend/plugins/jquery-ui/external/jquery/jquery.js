@@ -3486,7 +3486,7 @@ jQuery.extend( {
 			remaining = length !== 1 ||
 				( subordinate && jQuery.isFunction( subordinate.promise ) ) ? length : 0,
 
-			// the master Deferred.
+			// the Master Deferred.
 			// If resolveValues consist of only a single Deferred, just use that.
 			deferred = remaining === 1 ? subordinate : jQuery.Deferred(),
 
@@ -3523,7 +3523,7 @@ jQuery.extend( {
 			}
 		}
 
-		// if we're not waiting on anything, resolve the master
+		// if we're not waiting on anything, resolve the Master
 		if ( !remaining ) {
 			deferred.resolveWith( resolveContexts, resolveValues );
 		}
