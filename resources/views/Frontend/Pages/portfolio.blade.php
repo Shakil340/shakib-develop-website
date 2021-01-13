@@ -7,7 +7,7 @@
             <div class="portfolio-image">
                 <h2 class="text-center">Clipping Path</h2>
 
-                <div class="slider ">
+                <div class="port-slider ">
                     <a href="{{url('inc/Frontend')}}/img/shakib.jpg" data-fancybox="shakil">
                         <img src="{{url('inc/Frontend')}}/img/shakib.jpg" alt="" />
                     </a>
@@ -34,7 +34,7 @@
             </div>
             <div class="portfolio-image">
                 <h2 class="text-center">Clipping Path</h2>
-                <div class="slider ">
+                <div class="port-slider ">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
@@ -45,7 +45,7 @@
             </div>
             <div class="portfolio-image">
                 <h2 class="text-center">Clipping Path</h2>
-                <div class="slider ">
+                <div class="port-slider ">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
@@ -56,7 +56,7 @@
             </div>
             <div class="portfolio-image">
                 <h2 class="text-center">Clipping Path</h2>
-                <div class="slider ">
+                <div class="port-slider ">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
                     <img src="{{url('inc/Frontend')}}/img/cup 1.jpg" alt="">
