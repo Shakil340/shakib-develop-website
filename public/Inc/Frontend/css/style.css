@@ -142,7 +142,7 @@ ul.why-left {
 }
 ul.free-left {
     margin-left: 45px;
-    
+
 }
 ul.free-left li{
     list-style: inherit !important;
@@ -228,9 +228,13 @@ li.in:before {
     margin-left: 28px;
 }
 button.readme.d-inline {
-    font-size: 11px;
+    font-size: 12px;
     background: none;
     font-weight: 600;
+    color: #000;
+    height: 25px;
+    padding: 2px 2px;
+
 }
 .pad{
     margin-top: 10px;
@@ -244,9 +248,9 @@ button.readme.d-inline {
 
 
 
-/* 
+/*
 ===========================================
-                Footer Area 
+                Footer Area
 ===========================================
 */
 .copyright p.text-center{
@@ -316,7 +320,7 @@ ul.social-link span {
 }
 .our-service li a{
     color: #666666;
-    
+
 }
 .our-price.text-center {
     border: 2px red dashed;
@@ -326,7 +330,7 @@ ul.social-link span {
 .our-price.text-center svg{
     font-size: 60px;
     color: #069E33;
-    
+
 }
 .recent-image {
     margin-right: 12px;
@@ -366,7 +370,6 @@ ul.slick-dots li button {
     margin-right: 5px;
 }
 section.our-shak-bg{
-    background-image: url('img/pc.jpg');
     background-attachment: fixed;
     color: white;
     margin-top: 20px;
@@ -450,9 +453,9 @@ mark.bg-mark{
 
 
 
-/* 
+/*
 ===========================================
-Drag and Drop Files Here  
+Drag and Drop Files Here
 ===========================================
 */
 h2.pd{
@@ -529,9 +532,9 @@ div.margin-tp{
     margin-top: 20px;
 }
 
-/* 
+/*
 =========================================
-Login page 
+Login page
 ========================================
 */
 
@@ -745,7 +748,7 @@ a {
     width: 500px;
     left: 100px;
     margin: 0 auto;
-    
+
 }
 
 ::placeholder {
@@ -768,7 +771,7 @@ input:focus {
 }
 
 
-/* 
+/*
 =========================================
 Portfolio image
 =========================================
@@ -776,7 +779,7 @@ Portfolio image
 
 img.slick-slide {
     margin: 0px 10px;
-    
+
 }
 
 .port-padd{

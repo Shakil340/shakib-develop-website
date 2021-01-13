@@ -442,7 +442,7 @@
 
     </section>
 
-    <section class="our-shak-bg">
+    <section class="our-shak-bg" style="background-image: url('{{url('inc/Frontend')}}/img/pc.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

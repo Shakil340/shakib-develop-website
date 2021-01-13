@@ -1,4 +1,5 @@
-
+</div>
+</div>
 <footer class="bg-footer">
     <div class="container">
         <div class="footer-widget">
@@ -84,7 +85,7 @@
 </footer>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -96,6 +97,8 @@
 
 <!-- Fancybox  -->
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="{{asset('inc/Frontend')}}/js/utils.js"></script>
+<script src="{{asset('inc/Frontend')}}/js/intlTelInput.js"></script>
 
 <script src="{{asset('js/all.js')}}"></script>
 

@@ -36,7 +36,7 @@
                         <br>
                         <h5 class="text-center">Maximum & Senior QUALITY</h5>
                         <div class="why-us-image">
-                            <img src="img/office_image.jpg" width="100%" alt="">
+                            <img src="{{url('inc/Frontend')}}/img/office_image.jpg" width="100%" alt="">
                         </div>
                     </div>
                 </div>
