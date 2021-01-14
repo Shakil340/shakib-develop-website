@@ -118,6 +118,8 @@ Route::prefix('/service')->name('service.')->group(function(){
 
 Route::prefix('slider')->name('slider.')->group(function(){
     Route::get('/manage',[SliderController::class,'index'])->name('index');
+    Route::get('/create',[SliderController::class,'create'])->name('create');
+    Route::post('/store',[SliderController::class,'store'])->name('store');
 });
 
 

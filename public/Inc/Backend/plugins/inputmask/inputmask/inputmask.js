@@ -284,7 +284,7 @@
                         mtoken.matches.splice(position++, 0, {
                             fn: new RegExp(element, opts.casing ? "i" : ""),
                             optionality: false,
-                            newBlockMarker: prevMatch === undefined ? "Master" : prevMatch.def !== element,
+                            newBlockMarker: prevMatch === undefined ? "master" : prevMatch.def !== element,
                             casing: null,
                             def: element,
                             placeholder: undefined,
@@ -297,7 +297,7 @@
                             mtoken.matches.splice(position++, 0, {
                                 fn: null,
                                 optionality: false,
-                                newBlockMarker: prevMatch === undefined ? "Master" : prevMatch.def !== lmnt && prevMatch.fn !== null,
+                                newBlockMarker: prevMatch === undefined ? "master" : prevMatch.def !== lmnt && prevMatch.fn !== null,
                                 casing: null,
                                 def: opts.staticDefinitionSymbol || lmnt,
                                 placeholder: opts.staticDefinitionSymbol !== undefined ? lmnt : undefined,
@@ -314,7 +314,7 @@
                                 this.test = maskdef.validator;
                             }() : new RegExp("."),
                             optionality: false,
-                            newBlockMarker: prevMatch === undefined ? "Master" : prevMatch.def !== (maskdef.definitionSymbol || element),
+                            newBlockMarker: prevMatch === undefined ? "master" : prevMatch.def !== (maskdef.definitionSymbol || element),
                             casing: maskdef.casing,
                             def: maskdef.definitionSymbol || element,
                             placeholder: maskdef.placeholder,
@@ -324,7 +324,7 @@
                         mtoken.matches.splice(position++, 0, {
                             fn: null,
                             optionality: false,
-                            newBlockMarker: prevMatch === undefined ? "Master" : prevMatch.def !== element && prevMatch.fn !== null,
+                            newBlockMarker: prevMatch === undefined ? "master" : prevMatch.def !== element && prevMatch.fn !== null,
                             casing: null,
                             def: opts.staticDefinitionSymbol || element,
                             placeholder: opts.staticDefinitionSymbol !== undefined ? element : undefined,
@@ -807,7 +807,7 @@
                 var tst = tests[ndx];
                 tstLocator = getLocator(tst, targetLocator.length);
                 var distance = Math.abs(tstLocator - targetLocator);
-                if (closest === undefined || tstLocator !== "" && distance < closest || bestMatch && !opts.greedy && bestMatch.match.optionality && bestMatch.match.newBlockMarker === "Master" && (!tst.match.optionality || !tst.match.newBlockMarker) || bestMatch && bestMatch.match.optionalQuantifier && !tst.match.optionalQuantifier) {
+                if (closest === undefined || tstLocator !== "" && distance < closest || bestMatch && !opts.greedy && bestMatch.match.optionality && bestMatch.match.newBlockMarker === "master" && (!tst.match.optionality || !tst.match.newBlockMarker) || bestMatch && bestMatch.match.optionalQuantifier && !tst.match.optionalQuantifier) {
                     closest = distance;
                     bestMatch = tst;
                 }
@@ -1518,7 +1518,7 @@
         function seekPrevious(pos, newBlock) {
             var position = pos, tests;
             if (position <= 0) return 0;
-            while (--position > 0 && (newBlock === true && getTest(position).match.newBlockMarker !== true || newBlock !== true && !isMask(position) && (tests = getTests(position),
+            while (--position > 0 && (newBlock === true && getTest(position).match.newBlockMarker !== true || newBlock !== true && !isMask(position) && (tests = getTests(position), 
             tests.length < 2 || tests.length === 2 && tests[1].match.def === ""))) {}
             return position;
         }

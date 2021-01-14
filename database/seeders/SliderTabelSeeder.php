@@ -23,6 +23,7 @@ class SliderTabelSeeder extends Seeder
                 'img3'=>$faker->imageUrl($width = 1240, $height = 600),
                 'img4'=>$faker->imageUrl($width = 1240, $height = 600),
                 'img5'=>$faker->imageUrl($width = 1240, $height = 600),
+                'status'=>rand(0,1)
             ]);
         }
     }

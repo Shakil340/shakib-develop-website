@@ -1532,7 +1532,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0])
+   return "#" + hexDouble(rgba[0]) 
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -11477,7 +11477,7 @@ var Scale = core_element.extend({
 		// Update Lifecycle - Probably don't want to ever extend or overwrite this function ;)
 		me.beforeUpdate();
 
-		// Absorb the Master measurements
+		// Absorb the master measurements
 		me.maxWidth = maxWidth;
 		me.maxHeight = maxHeight;
 		me.margins = helpers$1.extend({
@@ -19861,7 +19861,7 @@ var Legend = core_element.extend({
 		// Update Lifecycle - Probably don't want to ever extend or overwrite this function ;)
 		me.beforeUpdate();
 
-		// Absorb the Master measurements
+		// Absorb the master measurements
 		me.maxWidth = maxWidth;
 		me.maxHeight = maxHeight;
 		me.margins = margins;
@@ -20389,7 +20389,7 @@ var Title = core_element.extend({
 		// Update Lifecycle - Probably don't want to ever extend or overwrite this function ;)
 		me.beforeUpdate();
 
-		// Absorb the Master measurements
+		// Absorb the master measurements
 		me.maxWidth = maxWidth;
 		me.maxHeight = maxHeight;
 		me.margins = margins;

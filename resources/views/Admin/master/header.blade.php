@@ -1,91 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from bootstrapmaster.com/live/metro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jan 2018 16:56:12 GMT -->
+<html>
 <head>
-
-    <!-- start: Meta -->
     <meta charset="utf-8">
-    <title>Metro Admin Template - Metro UI Style Bootstrap Admin Template</title>
-    <meta name="description" content="Metro Admin Template.">
-    <meta name="author" content="Łukasz Holeczek">
-    <meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-    <!-- end: Meta -->
-
-    <!-- start: Mobile Specific -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | Blank Page</title>
+    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- end: Mobile Specific -->
 
-    <!-- start: CSS -->
-    <link id="bootstrap-style" href="{{asset('Inc/Backend')}}/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{asset('Inc/Backend')}}/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link id="base-style" href="{{asset('Inc/Backend')}}/css/style.css" rel="stylesheet">
-    <link id="base-style-responsive" href="{{asset('Inc/Backend')}}/css/style-responsive.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-    <!-- end: CSS -->
-
-
-    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <link id="ie-style" href="{{asset('Inc/Backend')}}/css/ie.css" rel="stylesheet">
-    <![endif]-->
-
-    <!--[if IE 9]>
-    <link id="ie9style" href="{{asset('Inc/Backend')}}/css/ie9.css" rel="stylesheet">
-    <![endif]-->
-
-    <!-- start: Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <!-- end: Favicon -->
-
-
-
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('inc/Backend')}}/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="{{asset('inc/Backend')}}/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+    <!-- Navbar -->
 
-<body>
-<!-- start: Header -->
-<div class="navbar">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="{{route('dashboard')}}"><span>Metro</span></a>
+    {{--    <nav class="main-header navbar navbar-expand navbar-white navbar-light">--}}
+    {{--        <!-- Left navbar links -->--}}
+    {{--        <ul class="navbar-nav">--}}
+    {{--            <li class="nav-item">--}}
+    {{--                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>--}}
+    {{--            </li>--}}
+    {{--            <li class="nav-item d-none d-sm-inline-block">--}}
+    {{--                <a href="../../index3.html" class="nav-link">Home</a>--}}
+    {{--            </li>--}}
+    {{--            <li class="nav-item d-none d-sm-inline-block">--}}
+    {{--                <a href="#" class="nav-link">Contact</a>--}}
+    {{--            </li>--}}
+    {{--        </ul>--}}
 
-            <!-- start: Header Menu -->
-            <div class="nav-no-collapse header-nav">
-                <ul class="nav pull-right">
 
-                    <!-- end: Notifications Dropdown -->
-                    <!-- start: Message Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
 
-                    <!-- start: User Dropdown -->
-                    <li class="dropdown">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="halflings-icon white user"></i> {{Auth::user()->name}}
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-menu-title">
-                                <span>Account Settings</span>
-                            </li>
-                            <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-                            <li><a href="{{ route('logout') }}"><i class="halflings-icon off"></i> Logout</a></li>
-                        </ul>
-                    </li>
-                    <!-- end: User Dropdown -->
-                </ul>
-            </div>
-            <!-- end: Header Menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="margin-left: 1200px">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{\Illuminate\Support\Facades\Auth::user()->name}}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <form action=" " method="post">
+                            @csrf
+{{--                            <a class="dropdown-item" href="{{route('admin.logout')}}">Logout</a>--}}
+                        </form>
+
+
+                    </div>
+                </li>
+            </ul>
 
         </div>
-    </div>
-</div>
-<!-- start: Header -->
+    </nav>
 
-<div class="container-fluid-full">
-    <div class="row-fluid">
+
+{{--    </nav>--}}
+{{--    <!-- /.navbar -->--}}

@@ -2,93 +2,111 @@
 
 @section('content')
 
-    @include('Admin.master.left-sidebar')
+    <div class="card card-info  " style="height: 530px">
+        <div class="card card-info col-md-7 offset-md-3 p-0">
+            <div class="card-header">
+                <h3 class="card-title">Add Post</h3>
+            </div>
+            @if(session()->has('message'))
+                <div class="alert alert-{{session('type')}}">
+                    {{session('message')}}
+                </div>
+        @endif
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form action="{{route('slider.store')}}" method="post" enctype="multipart/form-data">
+                @csrf
 
-    <div id="content" class="span10" style="min-height: 246px;">
 
-        <div class="row-fluid sortable ui-sortable">
-            <div class="box span12">
-                <div class="box-header" data-original-title="">
-                    <h2><i class="halflings-icon edit"></i><span class="break"></span>Add Slider</h2>
-                    <div class="box-icon">
-                        <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-                        <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-                        <a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
+                <div class="form-group row">
+                    <label for="file" class="col-sm-3 col-form-label">Image 1</label>
+                    <div class="col-sm-9">
+                        <input type="file" value="{{old('img1')}}" class="form-control @error ('img1') is-invalid @enderror" name="img1" id="file">
+                        @error('img1')
+                        <div class="alert alert-danger">{{$message}}</div>
+                        @enderror
+                        <img src="" id="image"  style="width: 80px">
                     </div>
                 </div>
-                <div class="box-content">
-                    <form class="form-horizontal" action="" method="post">
-                        <fieldset>
 
 
 
-                            <div class="control-group">
-                                <label class="control-label" for="image1">Image 1</label>
-                                <div class="controls">
-                                    <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" id="image1" type="file" name="image1">
-                                        <span class="filename" style="user-select: none;">No file selected</span>
-                                        <span class="action" style="user-select: none;">Choose File</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="control-group">
-                                <label class="control-label" for="image1">Image 2</label>
-                                <div class="controls">
-                                    <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" id="image2" type="file" name="image2">
-                                        <span class="filename" style="user-select: none;">No file selected</span>
-                                        <span class="action" style="user-select: none;">Choose File</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="control-group">
-                                <label class="control-label" for="image3">Image 1</label>
-                                <div class="controls">
-                                    <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" id="image3" type="file" name="image3">
-                                        <span class="filename" style="user-select: none;">No file selected</span>
-                                        <span class="action" style="user-select: none;">Choose File</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="control-group">
-                                <label class="control-label" for="image4">Image 1</label>
-                                <div class="controls">
-                                    <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" id="image4" type="file" name="image4">
-                                        <span class="filename" style="user-select: none;">No file selected</span>
-                                        <span class="action" style="user-select: none;">Choose File</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="control-group">
-                                <label class="control-label" for="image1">Image 5</label>
-                                <div class="controls">
-                                    <div class="uploader" id="uniform-fileInput"><input class="input-file uniform_on" id="image5" type="file" name="image5">
-                                        <span class="filename" style="user-select: none;">No file selected</span>
-                                        <span class="action" style="user-select: none;">Choose File</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                                <button type="reset" class="btn">Cancel</button>
-                            </div>
-
-
-                        </fieldset>
-                    </form>
-
+                <div class="form-group row">
+                    <label for="file" class="col-sm-3 col-form-label">Image 2</label>
+                    <div class="col-sm-9">
+                        <input type="file" value="{{old('img2')}}" class="form-control @error ('img2') is-invalid @enderror" name="img2" id="file2">
+                        @error('img2')
+                        <div class="alert alert-danger">{{$message}}</div>
+                        @enderror
+                        <img src="" id="image2"  style="width: 80px">
+                    </div>
                 </div>
-            </div><!--/span-->
 
-        </div><!--/row-->
 
+
+                <div class="form-group row">
+                    <label for="file" class="col-sm-3 col-form-label">Image 3</label>
+                    <div class="col-sm-9">
+                        <input type="file" value="{{old('img3')}}" class="form-control @error ('img3') is-invalid @enderror" name="img3" id="file3">
+                        @error('img3')
+                        <div class="alert alert-danger">{{$message}}</div>
+                        @enderror
+                        <img src="" id="image3"  style="width: 80px">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group row">
+                    <label for="file" class="col-sm-3 col-form-label">Image 4</label>
+                    <div class="col-sm-9">
+                        <input type="file" value="{{old('img4')}}" class="form-control @error ('img4') is-invalid @enderror" name="img4" id="file4">
+                        @error('img4')
+                        <div class="alert alert-danger">{{$message}}</div>
+                        @enderror
+                        <img src="" id="image4"  style="width: 80px">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group row">
+                    <label for="file" class="col-sm-3 col-form-label">Image 5</label>
+                    <div class="col-sm-9">
+                        <input type="file" value="{{old('img5')}}" class="form-control @error ('img5') is-invalid @enderror" name="img5" id="file5">
+                        @error('img5')
+                        <div class="alert alert-danger">{{$message}}</div>
+                        @enderror
+                        <img src="" id="image5"  style="width: 80px">
+                    </div>
+                </div>
+
+
+
+                <div class="form-group row">
+                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input @error ('status') is-invalid @enderror" type="radio" name="status" id="active" value="1">
+                        <label class="form-check-label" for="active">Active</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input  @error ('status') is-invalid @enderror" type="radio" name="status" id="inactive" value="0">
+                        <label class="form-check-label" for="inactive">Inactive</label>
+                    </div>
+                    @error('status')
+                    <div class="alert alert-danger">{{$message}}</div>
+                    @enderror
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+
+
 @endsection
