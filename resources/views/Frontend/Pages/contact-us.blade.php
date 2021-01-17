@@ -11,30 +11,41 @@
                 <div class="col-md-6 ">
                     <div class="box-area">
 
-                        <form>
+                        <form action="{{route('contact.store')}}" method="post">
+                            @csrf
                             <div class="left-side">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name"
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name"
                                            required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
                                            aria-describedby="emailHelp" placeholder="Enter email" required>
                                 </div>
 
+                                @php
+
+                                use App\Models\Subject; $subjects = Subject::where('status',1)->get();
+
+                                @endphp
+
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Subject</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                        <option>Choose One:</option>
-                                        <option>Genaral Customer Service</option>
-                                        <option>Suggestions</option>
-                                        <option>Product Service</option>
 
 
+                                    <select name="subject_id" class="form-control" id="exampleFormControlSelect1">
+                                        <option >Choose One:</option>
+                                        @foreach($subjects as $subject)
+
+                                        <option value="{{$subject->id}}">{{$subject->name}}</option>
+
+                                        @endforeach
                                     </select>
+
+
                                 </div>
 
 
@@ -43,7 +54,7 @@
                             <div class="right-side">
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"
                                               placeholder="Enter Text Here" required></textarea>
                                 </div>
 

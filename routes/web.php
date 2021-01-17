@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\Contact\ContactController;
+use App\Http\Controllers\Admin\Contact\SubjectController;
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
 /*
@@ -120,6 +123,32 @@ Route::prefix('slider')->name('slider.')->group(function(){
     Route::get('/manage',[SliderController::class,'index'])->name('index');
     Route::get('/create',[SliderController::class,'create'])->name('create');
     Route::post('/store',[SliderController::class,'store'])->name('store');
+});
+
+
+//HomeService Page Routes
+
+Route::prefix('home_service')->name('home_service.')->group(function(){
+    Route::get('/manage',[HomeController::class,'index'])->name('index');
+    Route::get('/create',[HomeController::class,'create'])->name('create');
+    Route::post('/store',[HomeController::class,'store'])->name('store');
+});
+
+//Subject Page Routes
+
+Route::prefix('contact-us')->name('contact-us.')->group(function(){
+    Route::get('/manage',[SubjectController::class,'index'])->name('index');
+    Route::get('/create',[SubjectController::class,'create'])->name('create');
+    Route::post('/store',[SubjectController::class,'store'])->name('store');
+});
+
+
+//Contact-Us Page Routes
+
+Route::prefix('contact')->name('contact.')->group(function(){
+    Route::get('/manage',[ContactController::class,'index'])->name('index');
+    Route::post('/store',[ContactController::class,'store'])->name('store');
+
 });
 
 

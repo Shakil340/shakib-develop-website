@@ -42,7 +42,7 @@
             <ul class="navbar-nav mr-auto" style="margin-left: 1200px">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{\Illuminate\Support\Facades\Auth::user()->name}}
+{{--                        {{\Illuminate\Support\Facades\Auth::user()->name}}--}}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <form action=" " method="post">

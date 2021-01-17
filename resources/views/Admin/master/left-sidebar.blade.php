@@ -66,21 +66,21 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Brands
+                            Home Service
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('home_service.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Brand</p>
+                                <p>Manage Service</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('home_service.create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add Brand</p>
+                                <p>Add Service</p>
                             </a>
                         </li>
                     </ul>
@@ -89,21 +89,21 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Posts
+                            Subjects
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('contact-us.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Post</p>
+                                <p>Manage Subject</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add Post</p>
+                                <p>Add Subject</p>
                             </a>
                         </li>
                     </ul>
@@ -112,23 +112,18 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Coupons
+                            Contact-Us
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('contact.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Coupon</p>
+                                <p>Manage Contact</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add Coupon</p>
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
