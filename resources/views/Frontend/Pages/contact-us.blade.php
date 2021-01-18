@@ -15,13 +15,13 @@
                             @csrf
                             <div class="left-side">
                                 <div class="form-group">
-                                    <label for="name">Your Name</label>
+                                    <label for="name">Your Name <span class="text-danger">*</span></label>
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name"
                                            required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
+                                    <label for="exampleInputEmail1">Email address<span class="text-danger">*</span></label>
                                     <input type="email" name="email" class="form-control" id="exampleInputEmail1"
                                            aria-describedby="emailHelp" placeholder="Enter email" required>
                                 </div>
@@ -33,11 +33,11 @@
                                 @endphp
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Subject</label>
+                                    <label for="exampleFormControlSelect1">Subject<span class="text-danger">*</span></label>
 
 
-                                    <select name="subject_id" class="form-control" id="exampleFormControlSelect1">
-                                        <option >Choose One:</option>
+                                    <select name="subject_id" class="form-control" id="exampleFormControlSelect1" required>
+                                        <option>Choose One:</option>
                                         @foreach($subjects as $subject)
 
                                         <option value="{{$subject->id}}">{{$subject->name}}</option>
@@ -53,14 +53,14 @@
 
                             <div class="right-side">
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Message</label>
+                                    <label for="exampleFormControlTextarea1">Message<span class="text-danger">*</span></label>
                                     <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"
                                               placeholder="Enter Text Here" required></textarea>
                                 </div>
 
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                <div class="custom-form">
+                                    <input type="checkbox" class="custom-check" id="contact-checkbox" required>
+                                    <label class="custom-label" for="contact-checkbox">Check me out</label>
                                 </div>
                                 <div class="margin-tp">
 
@@ -74,7 +74,19 @@
                             <div class="clear-both"></div>
 
                         </form>
+
+
                     </div>
+
+                    @if(session()->has('message'))
+                        <div class="alert alert-{{session('type')}} alert-dismissible fade show" role="alert">
+                            <strong class="d-block text-center">{{session('message')}}</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+
                 </div>
 
                 <div class="col-md-6">

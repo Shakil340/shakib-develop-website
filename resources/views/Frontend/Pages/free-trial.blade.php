@@ -28,13 +28,13 @@
 
 
 
-                        <form method="post" action="#"  class="free-bg-drag">
+                        <form method="post" action="#"  class="free-bg-drag" enctype="multipart/form-data">
 
                             <div class="drag-50 w-50">
                                 <div class="form-group files color">
                                     <span class="drag-icon"><i class="fas fa-cloud-upload-alt"></i></span>
                                     <h4>Drag & Drop Files Here</h4>
-                                    <input type="file" class="form-control drag-opacity" multiple="">
+                                    <input type="file" name="thumbnail" class="form-control drag-opacity" multiple="">
                                 </div>
 
                             </div>
@@ -45,7 +45,7 @@
                                 <div class="form-group p-relative">
                                     <span class="free-name"> <i class="fas fa-user"></i></span>
 
-                                    <input type="text" class="form-control name" aria-describedby="emailHelp"
+                                    <input type="text" name="name" class="form-control name" aria-describedby="emailHelp"
                                            placeholder="Enter Your Name" required>
 
                                 </div>
@@ -53,13 +53,13 @@
                                 <div class="form-group p-relative">
                                     <span class="free-email"> <i class="fas fa-envelope"></i></span>
 
-                                    <input type="email" class="form-control name" id="exampleInputEmail1"
+                                    <input type="email" name="email" class="form-control name" id="exampleInputEmail1"
                                            aria-describedby="emailHelp" placeholder="Enter email" required>
                                 </div>
 
                                 <div class="form-group p-relative">
                                     <span class="free-email"> <i class="fas fa-globe-americas"></i></span>
-                                    <select class="form-control name" id="exampleFormControlSelect1">
+                                    <select name="location" class="form-control name" id="exampleFormControlSelect1">
                                         <option>Choose Your Country Name</option>
                                         <option>Bangladesh</option>
                                         <option>Pakistan</option>
@@ -74,29 +74,31 @@
 
                                 <div class="form-group">
 
-                                    <input id="phone" name="phone" type="tel">
+                                    <input id="phone" name="number" type="tel">
 
                                 </div>
 
 
                                 <div class="form-group p-relative">
                                     <span class="free-email"><i class="fas fa-check"></i></span>
-                                    <select class="form-control name" id="skb">
+                                    <select name="category_id" class="form-control name" id="skb">
                                         <option>Select Category</option>
-                                        <option>Bangladesh</option>
-                                        <option>Pakistan</option>
-                                        <option>Srilanka</option>
-                                        <option>Nepal</option>
-                                        <option>Bhutan</option>
-                                        <option>Other</option>
 
+                                        @php
+                                        use App\Models\Category;$categories = Category::where('status',1)->get();
+                                        @endphp
+                                        @foreach($categories as $category)
+
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+
+                                        @endforeach
                                     </select>
                                 </div>
 
 
                                 <div class="form-group p-relative">
                                     <span class="t-area"><i class="fas fa-pen"></i></span>
-                                    <textarea class="form-control name" id="exampleFormControlTextarea1" rows="3"
+                                    <textarea name="message" class="form-control name" id="exampleFormControlTextarea1" rows="3"
                                               placeholder="Enter Text Here" required></textarea>
                                 </div>
 

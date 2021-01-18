@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
            SliderTabelSeeder::class,
             UserTableSeeder::class,
             HomeServiceTableSeeder::class,
-            SubjectTableSeeder::class
+            SubjectTableSeeder::class,
+            CategoryTableSeeder::class
 
         ]);
     }

@@ -976,3 +976,25 @@ span.drag-icon {
     margin: 41px 0 9px 0;
 
 }
+
+
+.custom-form {
+    position: relative;
+}
+
+input#contact-checkbox {
+
+    width: 13px;
+    margin-left: 5px;
+}
+
+label.custom-label {
+    position: absolute;
+    left: 25px;
+    top: 8px;
+}
+
+.alert-dismissible .close {
+
+    height: 45px;
+}

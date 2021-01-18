@@ -16,7 +16,7 @@ class ContactController extends Controller
 
     public function store(Request $req){
 
-
+        try {
             if (Auth::check()){
                 $contacts = Contact::where('user_id',Auth::id())
                     ->first();
@@ -36,7 +36,7 @@ class ContactController extends Controller
 //            $contacts->message = $req->message;
 //            $contacts->save();
 
-          $contacts =  Contact::create([
+            $contacts =  Contact::create([
                 'user_id'=>Auth::id(),
                 'ip_address'=>$req->ip(),
                 'subject_id'=>$req->subject_id,
@@ -44,6 +44,11 @@ class ContactController extends Controller
                 'email'=>$req->email,
                 'message'=>$req->message
             ]);
+
+            $this->setSuccessMessage('Submit Successfully');
+        }catch (\Exception $e){
+            $this->setErrorMessage($e->getMessage());
+        }
 
 
 

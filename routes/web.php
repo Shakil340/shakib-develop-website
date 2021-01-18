@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Contact\SubjectController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\User\dashboard;
+use App\Http\Controllers\User\dashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
 /*
@@ -45,9 +47,9 @@ Route::get('/free-trial', function () {
     return view('Frontend.Pages.free-trial');
 })->name('free-trial');
 
-Route::get('/order-now', function () {
-    return view('Frontend.Pages.order');
-})->name('order-now');
+//Route::get('/order-now', function () {
+//    return view('User.dashboard');
+//})->name('order-now');
 
 Route::get('/contact-us', function () {
     return view('Frontend.Pages.contact-us');
@@ -150,6 +152,19 @@ Route::prefix('contact')->name('contact.')->group(function(){
     Route::post('/store',[ContactController::class,'store'])->name('store');
 
 });
+
+
+//Contact-Us Page Routes
+
+Route::prefix('user')->name('user.')->group(function(){
+    Route::get('/dashboard',[dashboardController::class,'index'])->name('index');
+    Route::post('/logout',[dashboardController::class,'logout'])->name('logout');
+
+
+});
+
+
+
 
 
 
