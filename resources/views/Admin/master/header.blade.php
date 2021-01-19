@@ -45,7 +45,7 @@
                         {{\Illuminate\Support\Facades\Auth::user()->name}}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <form action="{{route('user.logout')}}" method="post">
+                        <form action="{{route('logout')}}" method="post">
                             @csrf
                             <x-jet-dropdown-link href="{{ route('logout') }}"
                                                  onclick="event.preventDefault();

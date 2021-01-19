@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Contact\SubjectController;
+use App\Http\Controllers\Admin\FreeTrialController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\User\dashboard;
 use App\Http\Controllers\User\dashboardController;
@@ -159,6 +160,16 @@ Route::prefix('contact')->name('contact.')->group(function(){
 Route::prefix('user')->name('user.')->group(function(){
     Route::get('/dashboard',[dashboardController::class,'index'])->name('index');
     Route::post('/logout',[dashboardController::class,'logout'])->name('logout');
+
+
+});
+
+//Free-Trial Page Routes
+
+Route::prefix('free-trial')->name('free-trial.')->group(function(){
+    Route::get('/dashboard',[FreeTrialController::class,'index'])->name('index');
+    Route::post('/store',[FreeTrialController::class,'store'])->name('store');
+
 
 
 });

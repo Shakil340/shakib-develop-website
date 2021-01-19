@@ -25,16 +25,24 @@
                     </div>
 
                     <div class="col-md-12 ">
+                        @if(session()->has('message'))
+                            <div class="alert alert-{{session('type')}} alert-dismissible fade show" role="alert">
+                                <strong>{{session('message')}}</strong>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
 
 
-
-                        <form method="post" action="#"  class="free-bg-drag" enctype="multipart/form-data">
+                        <form method="post" action="{{route('free-trial.store')}}"  class="free-bg-drag" enctype="multipart/form-data">
+                            @csrf
 
                             <div class="drag-50 w-50">
                                 <div class="form-group files color">
                                     <span class="drag-icon"><i class="fas fa-cloud-upload-alt"></i></span>
                                     <h4>Drag & Drop Files Here</h4>
-                                    <input type="file" name="thumbnail" class="form-control drag-opacity" multiple="">
+                                    <input type="file" name="thumbnail" class="form-control drag-opacity" multiple>
                                 </div>
 
                             </div>
@@ -59,16 +67,9 @@
 
                                 <div class="form-group p-relative">
                                     <span class="free-email"> <i class="fas fa-globe-americas"></i></span>
-                                    <select name="location" class="form-control name" id="exampleFormControlSelect1">
-                                        <option>Choose Your Country Name</option>
-                                        <option>Bangladesh</option>
-                                        <option>Pakistan</option>
-                                        <option>Srilanka</option>
-                                        <option>Nepal</option>
-                                        <option>Bhutan</option>
-                                        <option>Other</option>
 
-                                    </select>
+                                    <input type="text" name="location" class="form-control name"
+                                           aria-describedby="emailHelp" placeholder="Enter Your Country Name" required>
                                 </div>
 
 
