@@ -8,7 +8,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Image;
 class FreeTrialController extends Controller
+
 {
+
+    public function index(){
+        $free_trials = FreeTrial::with('Category')->get();
+        return view('Admin.Free-Trial.manage',compact('free_trials'));
+    }
     public function store(Request $req){
 
 
@@ -32,7 +38,7 @@ class FreeTrialController extends Controller
                 $file_ex= $file->getClientOriginalExtension();
                 $file_name = rand(1,100).rand(1000,2000).$skb.'.'.$file_ex;
 
-                Image::make($file)->resize(268, 249)->save(public_path('uploads/image/'.$file_name));
+                Image::make($file)->save(public_path('uploads/image/'.$file_name));
                 $images[]=$file_name;
 
                 $skb++;
@@ -40,7 +46,9 @@ class FreeTrialController extends Controller
             }
         }
 
-
+        $req->validate([
+           'number'=>' numeric'
+        ]);
 
            FreeTrial::create([
                 'user_id'=>Auth::id(),
@@ -59,5 +67,12 @@ class FreeTrialController extends Controller
         }
 
         return redirect()->back();
+    }
+
+
+    public function single($id){
+        $singles = FreeTrial::find($id);
+
+        return view('Admin.Free-Trial.single',compact('singles'));
     }
 }

@@ -475,15 +475,17 @@ h2.pd{
 }
 
 .files input {
-    outline: 2px dashed #92b0b3;
-    outline-offset: -10px;
-    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+
     padding: 120px 0px 85px 35%;
     text-align: center !important;
     margin: 0;
     width: 100% !important;
     height: 400px;
     cursor: pointer;
+    padding-top: 220px;
+    background: none;
+    border: none;
+    opacity: 1;
 }
 .files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
     transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
@@ -997,4 +999,17 @@ label.custom-label {
 .alert-dismissible .close {
 
     height: 45px;
+}
+ #multiple:focus {
+     background: none;
+     border:none;
+     outline: 0;
+     box-shadow: none;
+}
+
+.files input#multiple:focus {
+     outline: 0;
+     outline-offset: 0;
+     transition: none;
+     border: none;
 }

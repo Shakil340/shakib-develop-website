@@ -167,8 +167,9 @@ Route::prefix('user')->name('user.')->group(function(){
 //Free-Trial Page Routes
 
 Route::prefix('free-trial')->name('free-trial.')->group(function(){
-    Route::get('/dashboard',[FreeTrialController::class,'index'])->name('index');
+    Route::get('/manage',[FreeTrialController::class,'index'])->name('index');
     Route::post('/store',[FreeTrialController::class,'store'])->name('store');
+    Route::get('/single/{id}',[FreeTrialController::class,'single'])->name('single');
 
 
 
