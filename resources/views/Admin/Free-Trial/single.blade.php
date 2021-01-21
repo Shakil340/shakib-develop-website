@@ -18,7 +18,8 @@
                     @foreach($images as $image)
                 <div class="col-sm-2">
 
-                        <img src="{{asset('uploads/image/'.$image)}}" class="img-fluid mb-2" alt="white sample">
+                        <img src="{{asset('uploads/image/'.$image)}}" class="img-fluid mb-2" alt="white sample" width="80px">
+                        <a href="{{route('free-trial.download',$single->id)}}">Download</a>
 
                 </div>
                     @endforeach

@@ -170,6 +170,7 @@ Route::prefix('free-trial')->name('free-trial.')->group(function(){
     Route::get('/manage',[FreeTrialController::class,'index'])->name('index');
     Route::post('/store',[FreeTrialController::class,'store'])->name('store');
     Route::get('/single/{id}',[FreeTrialController::class,'single'])->name('single');
+    Route::get('/download/{id}',[FreeTrialController::class,'download'])->name('download');
 
 
 

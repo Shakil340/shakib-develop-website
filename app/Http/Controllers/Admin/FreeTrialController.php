@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\FreeTrial;
+use Faker\Provider\File;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Image;
 class FreeTrialController extends Controller
 
@@ -72,7 +75,17 @@ class FreeTrialController extends Controller
 
     public function single($id){
         $singles = FreeTrial::where('id',$id)->get();
-
         return view('Admin.Free-Trial.single',compact('singles'));
+    }
+
+    public function download($id){
+        $downloads = FreeTrial::where('id',$id)->get();
+
+        $item = $downloads->thumbnail;
+
+        $filepath = public_path('uploads/image/').$item;
+
+            return Response::download($filepath);
+
     }
 }
