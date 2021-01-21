@@ -71,7 +71,7 @@ class FreeTrialController extends Controller
 
 
     public function single($id){
-        $singles = FreeTrial::find($id);
+        $singles = FreeTrial::where('id',$id)->get();
 
         return view('Admin.Free-Trial.single',compact('singles'));
     }
