@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Contact\SubjectController;
 use App\Http\Controllers\Admin\FreeTrialController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\User\dashboard;
 use App\Http\Controllers\User\dashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
@@ -22,13 +22,24 @@ use App\Http\Controllers\Admin\SliderController;
 
 // Home Page Route
 Route::get('/', function () {
-    return view('welcome');
+    return view('Frontend.Pages.home');
 });
 
+//User Panel Route
+Route::get('user/login',[dashboardController::class,'index'])->name('login.user');
+Route::post('store',[dashboardController::class,'store'])->name('store');
+Route::get('/user/dashboard',[dashboardController::class,'dashboard'])->name('user.dashboard');
+Route::get('/user/logout',[dashboardController::class,'logout'])->name('user.logout');
+
+
+//User Register
+
+Route::post('user/register',[dashboardController::class,'userStore'])->name('user.store');
+
 //Admin Panel Route
-Route::middleware(['auth:sanctum', 'verified'])->get('/admin/panel', function () {
-    return view('Admin.master.dashboard');
-})->name('dashboard');
+//Route::prefix('admin/')->name('admin.')->group(function(){
+//    Route::get('login',[AdminController::class,'index'])->name('show');
+//});
 
 
 //Menu Page Routes

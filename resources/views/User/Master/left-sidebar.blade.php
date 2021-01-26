@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{route('dashboard')}}" class="brand-link">
+    <a href="{{url('user/dashboard')}}" class="brand-link">
         <img src="{{asset('inc/backend')}}/dist/img/AdminLTELogo.png"
              alt="AdminLTE Logo"
              class="brand-image img-circle elevation-3"
@@ -31,7 +31,7 @@
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
-                            <i class="right fas fa-angle-left"></i>
+
                         </p>
                     </a>
                 </li>
@@ -43,107 +43,43 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Sliders
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('slider.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Slider</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('slider.create')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add Slider</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Home Service
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('home_service.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Service</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('home_service.create')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add Service</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Subjects
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('contact-us.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Subject</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add Subject</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Contact-Us
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('contact.index')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Contact</p>
-                            </a>
-                        </li>
+                            Create New Order
 
-                    </ul>
+                        </p>
+                    </a>
+
                 </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Orders
-                            <i class="right fas fa-angle-left"></i>
+                            Pending Orders
+
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Manage Order</p>
-                            </a>
-                        </li>
 
-                    </ul>
                 </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Complete Orders
+
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            All Orders
+
+                        </p>
+                    </a>
+
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

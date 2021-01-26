@@ -50,6 +50,23 @@
 
             // Portfolio js end
 
+
+
+            $('.forget-page').hide();
+            $('.forgot').click(function () {
+
+                $('.forget-page').show();
+
+            });
+            $('.tabs').click(function () {
+
+                $('.forget-page').hide();
+
+            });
+
+
+
+
         });
 
 

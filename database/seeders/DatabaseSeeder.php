@@ -19,7 +19,8 @@ class DatabaseSeeder extends Seeder
             UserTableSeeder::class,
             HomeServiceTableSeeder::class,
             SubjectTableSeeder::class,
-            CategoryTableSeeder::class
+            CategoryTableSeeder::class,
+            AdminTableSeeder::class
 
         ]);
     }

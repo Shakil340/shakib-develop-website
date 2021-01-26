@@ -107,6 +107,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('about-us')}}">About</a>
                     </li>
+                    @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('login.user')}}">Login/Register</a>
+                    </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('user.logout')}}">Logout</a>
+                        </li>
+
+                    @endguest
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" name="s" type="search" placeholder="Search"

@@ -45,28 +45,32 @@
                     <label for="tab-2" class="tab tabs">Sign Up</label>
 
 
-
-
                     <div class="login-space">
                         <div class="login">
-                            <form method="POST" action="{{ route('login') }}">
-                                @csrf
-                            <div class="group">
-                                <label for="email" class="label">Email</label>
-                                <input id="email" type="email" name="email" :value="old('email')" class="input" placeholder="Enter your Email" />
 
-                            </div>
-                            <div class="group"><label for="pass" class="label">Password</label>
-                                <input id="pass" type="password" name="password" required autocomplete="current-password" class="input" data-type="password" placeholder="Enter your password"/>
-                            </div>
-                            <div class="group">
-                                <input id="check" type="checkbox" class="check" /> <label for="check"><span
-                                        class="icon"></span> Keep me Signed in</label>
-                            </div>
-                            <div class="group"><input type="submit" class="button" value="Sign In" /></div>
-                            <div class="hr"></div>
-                            <div class="foot"><label for="tab-2">Don't Have an Account?</label></div>
-                            <div class="foot"><label for="tab-3" class="forgot">Forgot Password?</label></div>
+                            <form method="POST" action="{{ route('store') }}">
+
+                                @csrf
+
+                                <div class="group">
+                                    <label for="email" class="label">Email</label>
+                                    <input id="email" type="email" name="email" value="{{old('email')}}" class="input" />
+
+                                </div>
+
+                        <div class="group">
+                            <label for="pass" class="label">Password</label>
+      <input id="pass" type="password" name="password" value="{{old('password')}}" class="input" data-type="password" />
+                                </div>
+
+                                <div class="group">
+                                    <input id="check" type="checkbox" class="check" /> <label for="check"><span
+                                            class="icon"></span> Keep me Signed in</label>
+                                </div>
+                                <div class="group"><input type="submit" class="button" value="Sign In" /></div>
+                                <div class="hr"></div>
+                                <div class="foot"><label for="tab-2">Don't Have an Account?</label></div>
+                                <div class="foot"><label for="tab-3" class="forgot">Forgot Password?</label></div>
                             </form>
                         </div>
 
@@ -74,19 +78,36 @@
 
                         <div class="sign-up-form">
 
-                            <div class="group"><label for="user" class="label">Username</label> <input id="user"
-                                                                                                       type="text" class="input" placeholder="Create your Username" /></div>
-                            <div class="group"><label for="pass" class="label">Email Address</label> <input
-                                    id="pass" type="text" class="input" placeholder="Enter your email address" />
+                            <form method="post" action="{{route('user.store')}}">
+                                @csrf
+
+                            <div class="group">
+                                <label for="user" class="label">Username</label>
+                                <input id="user" type="text" name="name" value="{{old('name')}}" class="input" placeholder="Create your Username" />
                             </div>
-                            <div class="group"><label for="pass" class="label">Password</label> <input id="pass"
-                                                                                                       type="password" class="input" data-type="password"
-                                                                                                       placeholder="Create your password" /></div>
-                            <div class="group"><label for="pass" class="label">Repeat Password</label> <input
-                                    id="pass" type="password" class="input" data-type="password"
-                                    placeholder="Repeat your password" /></div>
+
+                            <div class="group">
+                                <label for="pass" class="label">Email Address</label>
+                                <input id="pass" type="email" name="email" value="{{old('email')}}" class="input" placeholder="Enter your email address" />
+                            </div>
+
+                            <div class="group">
+
+                                <label for="pass" class="label">Password</label>
+                                <input id="pass" type="password" name="password" value="{{old('password')}}" class="input" data-type="password" placeholder="Create your password" />
+
+                            </div>
+
+                            <div class="group">
+                                <label for="pass" class="label">Repeat Password</label>
+
+                                <input id="pass" type="password" class="input" name="password_confirmation" value="{{old('password_confirmation')}}" data-type="password" placeholder="Repeat your password" />
+
+                            </div>
 
                             <div class="group"><input type="submit" class="button" value="Sign Up" /></div>
+                            </form>
+
                             <div class="hr hr-custom"></div>
                             <div class="foot"><label for="tab-1">Already Member?</label></div>
                         </div>
