@@ -1,39 +1,45 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AdminController extends Controller
+class LoginController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
     use AuthenticatesUsers;
 
-//    public function login(Request $request){
-//        $credentials = $request->only('email','password');
-//        if (Auth::guard('admin')->attempt($credentials, $request->remember)){
-//            $user = Admin::where('email',$request->email)->first();
-//            Auth::guard('admin')->login($user);
-//            return redirect()->route('admin.home');
-//        }
-//        return redirect()->route('admin.login');
-//    }
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
-     * The user has been authenticated.
+     * Create a new controller instance.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
-     * @return mixed
+     * @return void
      */
-    protected function authenticated(Request $request, $user)
+    public function __construct()
     {
-        return redirect()->route('admin.home');
+        $this->middleware('guest')->except('logout');
     }
-
     /**
      * Log the user out of the application.
      *
@@ -52,7 +58,6 @@ class AdminController extends Controller
             ? new JsonResponse([], 204)
             : redirect('/');
     }
-
     /**
      * The user has logged out of the application.
      *
@@ -61,7 +66,7 @@ class AdminController extends Controller
      */
     protected function loggedOut(Request $request)
     {
-        return redirect()->route('admin.login');
+        return redirect('/home');
     }
 
     /**
@@ -71,6 +76,6 @@ class AdminController extends Controller
      */
     protected function guard()
     {
-        return Auth::guard('admin');
+        return Auth::guard('web');
     }
 }

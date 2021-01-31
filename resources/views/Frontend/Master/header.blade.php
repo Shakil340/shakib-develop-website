@@ -109,13 +109,20 @@
                     </li>
                     @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('login.user')}}">Login/Register</a>
+                        <a class="nav-link" href="{{route('login')}}">Login/Register</a>
                     </li>
-                    @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('user.logout')}}">Logout</a>
-                        </li>
 
+                    @else
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <li class="nav-item">
+                            <a class="nav-link" href="{{ route('logout') }}"
+                                                       onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            </li>
+                        </form>
                     @endguest
 
                 </ul>

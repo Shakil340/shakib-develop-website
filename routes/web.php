@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Contact\SubjectController;
 use App\Http\Controllers\Admin\FreeTrialController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\User\dashboardController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
 /*
@@ -20,27 +21,40 @@ use App\Http\Controllers\Admin\SliderController;
 */
 
 
-// Home Page Route
-Route::get('/', function () {
-    return view('Frontend.Pages.home');
-});
 
 //User Panel Route
-Route::get('user/login',[dashboardController::class,'index'])->name('login.user');
-Route::post('store',[dashboardController::class,'store'])->name('store');
-Route::get('/user/dashboard',[dashboardController::class,'dashboard'])->name('user.dashboard');
-Route::get('/user/logout',[dashboardController::class,'logout'])->name('user.logout');
+//Route::get('user/login',[dashboardController::class,'index'])->name('login.user');
+//Route::post('store',[dashboardController::class,'store'])->name('store');
+//Route::get('/user/dashboard',[dashboardController::class,'dashboard'])->name('user.dashboard');
+//Route::get('/user/logout',[dashboardController::class,'logout'])->name('user.logout');
 
 
 //User Register
 
-Route::post('user/register',[dashboardController::class,'userStore'])->name('user.store');
+//Route::post('user/register',[dashboardController::class,'userStore'])->name('user.store');
 
 //Admin Panel Route
 //Route::prefix('admin/')->name('admin.')->group(function(){
 //    Route::get('login',[AdminController::class,'index'])->name('show');
 //});
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix'=>'admin'],function (){
+    Route::group(['middleware'=>'admin.guest'], function (){
+        Route::view('login','Admin.login')->name('admin.login');
+        Route::post('login',[AdminController::class,'login'])->name('admin.auth');
+    });
+    Route::group(['middleware'=>'admin.auth'], function (){
+        Route::view('dashboard','Admin.home')->name('admin.home');
+        Route::post('logout',[AdminController::class,'logout'])->name('admin.logout');
+    });
+});
 
 //Menu Page Routes
 Route::get('/home', function () {
@@ -186,6 +200,8 @@ Route::prefix('free-trial')->name('free-trial.')->group(function(){
 
 
 });
+
+
 
 
 
