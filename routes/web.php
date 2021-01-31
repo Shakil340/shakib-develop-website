@@ -37,13 +37,11 @@ use App\Http\Controllers\Admin\SliderController;
 //Route::prefix('admin/')->name('admin.')->group(function(){
 //    Route::get('login',[AdminController::class,'index'])->name('show');
 //});
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(['prefix'=>'admin'],function (){
     Route::group(['middleware'=>'admin.guest'], function (){
@@ -57,7 +55,7 @@ Route::group(['prefix'=>'admin'],function (){
 });
 
 //Menu Page Routes
-Route::get('/home', function () {
+Route::get('/', function () {
     return view('Frontend.Pages.home');
 })->name('home');
 
