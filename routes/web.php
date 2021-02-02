@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\Contact\SubjectController;
 use App\Http\Controllers\Admin\FreeTrialController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\User\dashboardController;
+use App\Http\Controllers\User\OrderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
@@ -49,9 +50,23 @@ Route::group(['prefix'=>'admin'],function (){
         Route::post('login',[AdminController::class,'login'])->name('admin.auth');
     });
     Route::group(['middleware'=>'admin.auth'], function (){
-        Route::view('dashboard','Admin.home')->name('admin.home');
+        Route::view('dashboard','Admin.master.dashboard')->name('admin.home');
         Route::post('logout',[AdminController::class,'logout'])->name('admin.logout');
     });
+});
+Route::group(['prefix'=>'user'],function (){
+    Route::group(['middleware'=>'auth'], function (){
+        Route::get('dashboard/new-order', function () {
+            return view('User.dashboard');
+        })->name('order-now');
+
+        Route::get('create/new-order', function () {
+            return view('User.Orders.add');
+        })->name('create-order');
+        Route::post('store',[OrderController::class,'store'])->name('order.store');
+        Route::get('pending-order',[OrderController::class,'pending'])->name('order.pending');
+    });
+
 });
 
 //Menu Page Routes
@@ -71,9 +86,7 @@ Route::get('/free-trial', function () {
     return view('Frontend.Pages.free-trial');
 })->name('free-trial');
 
-//Route::get('/order-now', function () {
-//    return view('User.dashboard');
-//})->name('order-now');
+
 
 Route::get('/contact-us', function () {
     return view('Frontend.Pages.contact-us');

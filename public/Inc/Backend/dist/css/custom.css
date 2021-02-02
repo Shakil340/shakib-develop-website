@@ -1,0 +1,150 @@
+/*
+===========================================
+Drag and Drop Files Here
+===========================================
+*/
+h2.pd{
+    padding: 10px 0px;
+}
+
+.spaces {
+    padding: 20px 0px;
+}
+
+.files p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.files input {
+
+    padding: 120px 0px 85px 35%;
+    text-align: center !important;
+    margin: 0;
+    width: 100% !important;
+    height: 400px;
+    cursor: pointer;
+    padding-top: 220px;
+    background: none;
+    border: none;
+    opacity: 1;
+}
+.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+}
+.files{ position:relative}
+
+.color{
+    background-color: #f1f1f1;
+    border: 2px dashed;
+    border-color: gray;
+    height: 380px;
+    margin-top: 9px;
+}
+.from-br {
+    border: 4px solid gray;
+}
+
+.right-side {
+    width: 48%;
+    float: right;
+    margin-left: 10px;
+}
+.left-side {
+    width: 48%;
+    float: left;
+}
+
+.clear-both {
+    clear: both;
+}
+
+h3.pdd{
+    padding: 20px 0px;
+}
+
+.house-padd {
+    padding: 0px 175px;
+    margin-top: 60px;
+}
+.contact-bg{
+
+    background-color: #e2decf!important;
+    padding-bottom: 20px;
+}
+div.margin-tp{
+    margin-top: 20px;
+}
+
+
+.drag-opacity{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drag-50 {
+    float: left;
+    width: 47% !important;
+    margin-left: 20px;
+}
+
+.drag-50 h4 {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+span.drag-icon {
+    position: absolute;
+    left: 50%;
+    font-size: 50px;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.files input#multiple:focus {
+    outline: 0;
+    outline-offset: 0;
+    transition: none;
+    border: none;
+}
+
+#multiple:focus {
+    background: none;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+}
+.files input:focus {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    border: 1px solid #92b0b3;
+}
+/*
+=====================================
+order page custom css
+=====================================
+*/
+.form-group.amount-p {
+    position: relative;
+}
+span.offer-amount {
+    position: absolute;
+    left: 5px;
+    top: 7px;
+}
+.color {
+
+    height: 240px;
+
+}
+.files input {
+    padding: 140px 50px 96px 125px;
+    height: 0px;
+}

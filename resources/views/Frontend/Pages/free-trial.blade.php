@@ -25,6 +25,9 @@
                     </div>
 
                     <div class="col-md-12 ">
+
+
+
                         @if(session()->has('message'))
                             <div class="alert alert-{{session('type')}} alert-dismissible fade show" role="alert">
                                 <strong>{{session('message')}}</strong>

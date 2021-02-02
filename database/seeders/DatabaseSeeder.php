@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             HomeServiceTableSeeder::class,
             SubjectTableSeeder::class,
             CategoryTableSeeder::class,
-            AdminTableSeeder::class
+            AdminTableSeeder::class,
+            ServiceTableSeeder::class
 
         ]);
     }

@@ -99,8 +99,9 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('user.index')}}">Order Now</a>
+                        <a class="nav-link" href="{{route('order-now')}}">Order Now</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contact-us')}}">Contact Us</a>
                     </li>
