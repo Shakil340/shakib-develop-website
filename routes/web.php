@@ -60,11 +60,17 @@ Route::group(['prefix'=>'user'],function (){
             return view('User.dashboard');
         })->name('order-now');
 
+        Route::get('dashboard', function () {
+            return view('User.dashboard');
+        })->name('user.dashboard');
+
         Route::get('create/new-order', function () {
             return view('User.Orders.add');
         })->name('create-order');
         Route::post('store',[OrderController::class,'store'])->name('order.store');
         Route::get('pending-order',[OrderController::class,'pending'])->name('order.pending');
+        Route::get('complete-order',[OrderController::class,'complete'])->name('order.complete');
+        Route::get('all-order',[OrderController::class,'all'])->name('order.all');
     });
 
 });
@@ -192,6 +198,12 @@ Route::prefix('contact')->name('contact.')->group(function(){
 
 
 //Contact-Us Page Routes
+
+
+
+
+
+
 
 Route::prefix('user')->name('user.')->group(function(){
     Route::get('/dashboard',[dashboardController::class,'index'])->name('index');

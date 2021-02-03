@@ -12,6 +12,8 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('inc/Backend')}}/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('inc/Backend')}}/plugins/jsgrid/jsgrid.min.css">
+    <link rel="stylesheet" href="{{asset('inc/Backend')}}/plugins/jsgrid/jsgrid-theme.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- overlayScrollbars -->
@@ -24,48 +26,26 @@
 <!-- Site wrapper -->
 <div class="wrapper">
     <!-- Navbar -->
-
-    {{--    <nav class="main-header navbar navbar-expand navbar-white navbar-light">--}}
-    {{--        <!-- Left navbar links -->--}}
-    {{--        <ul class="navbar-nav">--}}
-    {{--            <li class="nav-item">--}}
-    {{--                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>--}}
-    {{--            </li>--}}
-    {{--            <li class="nav-item d-none d-sm-inline-block">--}}
-    {{--                <a href="../../index3.html" class="nav-link">Home</a>--}}
-    {{--            </li>--}}
-    {{--            <li class="nav-item d-none d-sm-inline-block">--}}
-    {{--                <a href="#" class="nav-link">Contact</a>--}}
-    {{--            </li>--}}
-    {{--        </ul>--}}
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="padding: 15px 0px;background: #343a40">
+        <!-- Left navbar links -->
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto" style="margin-left: 1200px">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                {{\Illuminate\Support\Facades\Auth::user()->name}}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <form action="{{route('logout')}}" method="post">
-                            @csrf
-                            <x-jet-dropdown-link href="{{ route('logout') }}"
-                                                 onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Logout') }}
-                            </x-jet-dropdown-link>
-                        </form>
+        <!-- Right navbar links -->
+        <ul class="d-flex w-100" style="justify-content: flex-end; list-style: none; margin: 0px">
+            <Li><span><i class="fas fa-user"></i></span><span style="margin-right: 22px;margin-left: 4px; font-size: 18px">{{Auth::user()->name}}</span></Li>
+            <Li>
+                <span><i class="fas fa-sign-out-alt"></i></span>
+                    <form action="{{route('logout')}}" method="post" style="display: inline-block; margin-left: -25px; margin-right: 20px;">
+                        @csrf
+                        <x-jet-dropdown-link href="{{ route('logout') }}"
+                                             onclick="event.preventDefault();
+                                                this.closest('form').submit();" style="font-size: 18px !important; color: rgba(255,255,255,.5);">
+                            {{ __('Logout') }}
+                        </x-jet-dropdown-link>
+                    </form>
 
 
-                    </div>
-                </li>
-            </ul>
-
-        </div>
+                </Li>
+        </ul>
     </nav>
-
-
-{{--    </nav>--}}
-{{--    <!-- /.navbar -->--}}
+    <!-- /.navbar -->

@@ -33,4 +33,14 @@ class OrderController extends Controller
         return view('User.Orders.pending',compact('pending'));
 
     }
+
+    public function complete(){
+        $complete = order::with('service')->where('status',1)->get();
+        return view('User.Orders.complete',compact('complete'));
+    }
+
+    public function all(){
+        $all = order::with('service')->get();
+        return view('User.Orders.all',compact('all'));
+    }
 }

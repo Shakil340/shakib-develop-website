@@ -2,11 +2,30 @@
 
 @section('content')
 
-    <section class="content">
+    <div class="content-wrapper" style="min-height: 1200.88px;">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Create New Order</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="{{route('order-now')}}">Dashboard</a></li>
+                            <li class="breadcrumb-item active">My Dashboard</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+
+        <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-9 offset-3" style="background: #dad9da; margin-left: 21%;padding-bottom: 40px">
+                <div class="card  col-md-9" style="background: #dad9da; padding-bottom: 40px; margin: 0 auto">
 
 
                             <form method="post" action="{{route('order.store')}}"  class="free-bg-drag" enctype="multipart/form-data">
@@ -83,6 +102,6 @@
         </div><!-- /.container-fluid -->
     </section>
 
-    <section style="height: 180px"></section>
+    </div>
 
 @endsection
