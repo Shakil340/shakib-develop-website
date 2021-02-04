@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="{{asset('inc/Frontend/css')}}/style.css" />
+    <link rel="stylesheet" href="{{asset('Inc/Frontend/css')}}/style.css" />
 </head>
 
 <body class="all-body">
