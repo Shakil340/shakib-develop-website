@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Graphicsdesignpoint</title>
+    <title>Graphics Design Point</title>
+    <link rel="shortcut icon" type="image/jpg" href="{{asset('Inc/Frontend/img/skl.png')}}"/>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,17 +15,17 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="{{asset('inc/Frontend')}}/css/intlTelInput.css">
-    <link rel="stylesheet" href="{{asset('inc/Frontend')}}/css/demo.css">
+    <link rel="stylesheet" href="{{asset('Inc/Frontend')}}/css/intlTelInput.css">
+    <link rel="stylesheet" href="{{asset('Inc/Frontend')}}/css/demo.css">
 
-    <link rel="stylesheet" href="{{asset('inc/Frontend')}}/css/style.css" />
+    <link rel="stylesheet" href="{{asset('Inc/Frontend')}}/css/style.css" />
 </head>
 
 <body style="margin: 0px">
 <header class="bg-danger bg-header">
     <div class="container">
         <nav class="navbar navbar-expand-lg ">
-            <a class="navbar-brand" href="{{route('home')}}"><img style="width: 110px;" src="{{url('inc/Frontend/')}}/img/skl.png" /></a>
+            <a class="navbar-brand" href="{{route('home')}}"><img style="width: 110px;" src="{{asset('Inc/Frontend/')}}/img/skl.png" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">

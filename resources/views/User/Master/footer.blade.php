@@ -2,7 +2,7 @@
 
 <footer class="main-footer text-center">
 
-    <strong>Copyright © Reserved By Graphics Design Point 2020-2021 <a href="http://adminlte.io">Shakibul Hasan</a>.</strong> Owner Of Graphics Design Point
+    <strong>Copyright © Reserved By Graphics Design Point 2020-2021 <a href="#">Shakibul Hasan</a>.</strong> Owner Of Graphics Design Point
     reserved.
 </footer>
 
@@ -15,13 +15,13 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{{asset('inc/Backend')}}/plugins/jquery/jquery.min.js"></script>
+<script src="{{asset('Inc/Backend')}}/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('inc/Backend')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('Inc/Backend')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('inc/Backend')}}/dist/js/adminlte.min.js"></script>
+<script src="{{asset('Inc/Backend')}}/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{asset('inc/Backend')}}/dist/js/demo.js"></script>
+<script src="{{asset('Inc/Backend')}}/dist/js/demo.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

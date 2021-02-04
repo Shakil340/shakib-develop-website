@@ -24,7 +24,7 @@
                             are
                             here to lend out our exceptional services to all E-Commerce businesses.</p>
                         <div class="resizing-image">
-                            <img src="{{url('inc/Frontend')}}/img/image resizing  (1).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend')}}/img/image resizing  (1).jpg" alt="">
                         </div>
                         <p style="margin-top: 20px;"> Every industry cannot take a corner so we will sum up by saying
                             that any sort of online
@@ -46,7 +46,7 @@
                             what it needs.</p>
 
                         <div class="resizing-image">
-                            <img src="{{url('inc/Frontend')}}/img/image resizing  (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend')}}/img/image resizing  (2).jpg" alt="">
                         </div>
 
                         <p style="margin-top: 20px;"> These services are basically the part of clipping path services.
@@ -78,7 +78,7 @@
 
                 <div class="col-md-4">
                     <div class="image-box">
-                        <img src="{{url('inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
                             <h4 class="text-center"> Photo Clipping Path Services</h4>
                             <p class="d-inline">Mage Clipping Path Is An Art. It Is An Essential Image Service To Remove
@@ -97,7 +97,7 @@
 
                 <div class="col-md-4">
                     <div class="image-box">
-                        <img src="{{url('inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
                             <h4 class="text-center"> Photo Clipping Path Services</h4>
                             <p class="d-inline">Mage Clipping Path Is An Art. It Is An Essential Image Service To Remove
@@ -116,7 +116,7 @@
 
                 <div class="col-md-4">
                     <div class="image-box">
-                        <img src="{{url('inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
                             <h4 class="text-center"> Photo Clipping Path Services</h4>
                             <p class="d-inline">Mage Clipping Path Is An Art. It Is An Essential Image Service To Remove

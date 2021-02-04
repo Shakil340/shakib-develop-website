@@ -11,14 +11,14 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('inc/Backend')}}/plugins/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="{{asset('inc/Backend')}}/plugins/jsgrid/jsgrid.min.css">
-    <link rel="stylesheet" href="{{asset('inc/Backend')}}/plugins/jsgrid/jsgrid-theme.min.css">
+    <link rel="stylesheet" href="{{asset('Inc/Backend')}}/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('Inc/Backend')}}/plugins/jsgrid/jsgrid.min.css">
+    <link rel="stylesheet" href="{{asset('Inc/Backend')}}/plugins/jsgrid/jsgrid-theme.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{asset('inc/Backend')}}/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="{{asset('inc/Backend')}}/dist/css/custom.css">
+    <link rel="stylesheet" href="{{asset('Inc/Backend')}}/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{asset('Inc/Backend')}}/dist/css/custom.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>

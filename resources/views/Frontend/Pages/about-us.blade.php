@@ -37,7 +37,7 @@
                             provides class one and perfect image related services & raster to vector service.</p>
                         <br>
                         <div class="image-bg">
-                            <img src="{{url('inc/Frontend')}}/img/office_image.jpg" width="1240" alt="">
+                            <img src="{{asset('Inc/Frontend')}}/img/office_image.jpg" width="1240" alt="">
                         </div>
                         <br>
                         <h6>Our Mission: </h6>

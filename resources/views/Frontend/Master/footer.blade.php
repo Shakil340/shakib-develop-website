@@ -69,8 +69,8 @@
                     </div>
 
                     <ul class="d-flex payment">
-                        <li><a href="#"><img src="{{url('inc/Frontend')}}/img/paypal 2.png" alt="" style="width:150px ;"></a></li>
-                        <li><a href="#"><img src="{{url('inc/Frontend')}}/img/payoneer.png" alt="" style="width:150px ;"></a></li>
+                        <li><a href="#"><img src="{{asset('Inc/Frontend')}}/img/paypal 2.png" alt="" style="width:150px ;"></a></li>
+                        <li><a href="#"><img src="{{asset('Inc/Frontend')}}/img/payoneer.png" alt="" style="width:150px ;"></a></li>
                     </ul>
 
                 </div>
@@ -102,9 +102,9 @@
 <!-- Fancybox  -->
 
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script src="{{asset('inc/Frontend/js/intlTelInput.js')}}"></script>
+<script src="{{asset('Inc/Frontend/js/intlTelInput.js')}}"></script>
 
-<script src="{{asset('inc/Frontend/js/custom.js')}}"></script>
+<script src="{{asset('Inc/Frontend/js/custom.js')}}"></script>
 <script>
     //Free-trial js start
     var input = document.querySelector("#phone");
@@ -129,7 +129,7 @@
         // placeholderNumberType: "MOBILE",
         // preferredCountries: ['cn', 'jp'],
         // separateDialCode: true,
-        utilsScript: "{{asset('inc/Frontend/js/utils.js')}}",
+        utilsScript: "{{asset('Inc/Frontend/js/utils.js')}}",
     });
 
     // Free-trial js end

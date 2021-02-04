@@ -59,7 +59,10 @@
                                         <td>{{$al->time}}</td>
                                         <td>{{$al->status == 1 ? 'Complete' : 'Pending'}}</td>
                                         <td>
-                                            <a href="">{{$al->status ==1 ? '' : 'Cancel'}}</a>
+
+                                                <a href="{{route('order.allSoftDelete',$al->id)}}">{{$al->status ==1 ? '' : 'Cancel'}}</a>
+
+
                                         </td>
 
                                     </tr>

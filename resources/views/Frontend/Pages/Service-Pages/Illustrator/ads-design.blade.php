@@ -27,7 +27,7 @@
                         perfect ad design service which is highly praised all around the world.</p>
 
                     <div class="logo-image">
-                        <img src="{{url('inc/Frontend')}}/img/logo (1).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend')}}/img/logo (1).jpg" alt="">
                     </div>
 
                 </div>

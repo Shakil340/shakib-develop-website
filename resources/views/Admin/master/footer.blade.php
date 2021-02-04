@@ -18,13 +18,13 @@
     <!-- ./wrapper -->
 
     <!-- jQuery -->
-    <script src="{{asset('inc/Backend')}}/plugins/jquery/jquery.min.js"></script>
+    <script src="{{asset('Inc/Backend')}}/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="{{asset('inc/Backend')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('Inc/Backend')}}/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="{{asset('inc/Backend')}}/dist/js/adminlte.min.js"></script>
+    <script src="{{asset('Inc/Backend')}}/dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="{{asset('inc/Backend')}}/dist/js/demo.js"></script>
+    <script src="{{asset('Inc/Backend')}}/dist/js/demo.js"></script>
 
 
     <script>

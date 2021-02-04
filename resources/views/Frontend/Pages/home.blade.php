@@ -3,20 +3,20 @@
 @section('content')
 
     <section>
-        <div class="container">
+        <div class="container" style="max-width: 100% !important;">
             <div class="row">
                 <div class="col-md-12 pt-0">
                     <div class="slider-area">
 
                         <div class="slider">
-                            <div><img src="{{url('inc/Frontend/')}}/img/logo (1).jpg" alt="" style="width: 1240px; height: 600px;"></div>
-                            <div><img src="{{url('inc/Frontend/')}}/img/image-masking (3).jpg" alt="" style="width: 1240px; height: 600px;">
+                            <div><img src="{{asset('Inc/Frontend/')}}/img/logo (1).jpg" alt="" style="width: 100%; height: 600px;"></div>
+                            <div><img src="{{asset('Inc/Frontend/')}}/img/image-masking (3).jpg" alt="" style="width: 100%; height: 600px;">
                             </div>
-                            <div><img src="{{url('inc/Frontend/')}}/img/image-masking (1).jpg" alt="" style="width: 1240px; height: 600px;">
+                            <div><img src="{{asset('Inc/Frontend/')}}/img/image-masking (1).jpg" alt="" style="width: 100%; height: 600px;">
                             </div>
-                            <div><img src="{{url('inc/Frontend/')}}/img/image-masking (1).jpg" alt="" style="width: 1240px; height: 600px;">
+                            <div><img src="{{asset('Inc/Frontend/')}}/img/image-masking (1).jpg" alt="" style="width: 100%; height: 600px;">
                             </div>
-                            <div><img src="{{url('inc/Frontend/')}}/img/image-masking (1).jpg" alt="" style="width: 1240px; height: 600px;">
+                            <div><img src="{{asset('Inc/Frontend/')}}/img/image-masking (1).jpg" alt="" style="width: 100%; height: 600px;">
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@
 
 
     <section class="recent-bg">
-        <div class="container">
+        <div class="container" style="max-width: 100% !important;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">
@@ -42,7 +42,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="clipping-path.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4> <a href="clipping-path.html">Photo Clipping Path Services</a> </h4>
@@ -71,7 +71,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="image-retouching.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4> <a href="image-retouching.html">High End Photo Retouching
@@ -102,7 +102,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="image-masking.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4 class="text-center"> <a href="image-masking.html">Image Masking </a> </h4>
@@ -136,7 +136,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="image-manipulation.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
 
                         <div class="image-box-botton">
@@ -168,7 +168,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="photo-resizing.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4> <a href="photo-resizing.html"> Photo Resizing Service</a> </h4>
@@ -202,7 +202,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="color-correction.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4 class="text-center"> <a href="color-correction.html"> Image Color Correction</a> </h4>
@@ -234,7 +234,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="Raster-to-vector.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4 class="text-center"> <a href="Raster-to-vector.html"> Raster To Vector Services</a>
@@ -269,7 +269,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="background-remove.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4 class="text-center"> <a href="background-remove.html"> Background Remove Service</a>
@@ -301,7 +301,7 @@
                 <div class="col-md-4">
                     <div class="image-box">
                         <a href="logo-design.html">
-                            <img src="{{url('inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
+                            <img src="{{asset('Inc/Frontend/')}}/img/clipping path (2).jpg" alt="">
                         </a>
                         <div class="image-box-botton">
                             <h4 class="text-center"> <a href="logo-design.html">Logo Design Service </a> </h4>
@@ -334,7 +334,7 @@
     </section>
 
     <section>
-        <div class="container">
+        <div class="container" style="max-width: 100% !important;">
 
             <div class="row">
                 <div class="col-md-4 wid-35">
@@ -378,8 +378,8 @@
         </div>
     </section>
 
-    <section class="recent-bg">
-        <div class="container">
+    <section class="recent-bg" >
+        <div class="container" style="max-width: 100% !important;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="recent-work text-center">
@@ -388,18 +388,9 @@
                     </div>
                 </div>
                 <div class="recent-images d-flex">
-                    <div class="recent-image position-relative">
+                    <div class="recent-image position-relative" style="margin-left: 12px;">
 
-                        <img src="{{url('inc/Frontend/')}}/img/logo (1).jpg" alt="">
-
-                        <div class="recent-content position-absolute">
-                            <h6 class="text-center mr">Some of our </h6>
-                        </div>
-
-                    </div>
-                    <div class="recent-image position-relative">
-
-                        <img src="{{url('inc/Frontend/')}}/img/logo (1).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend/')}}/img/logo (1).jpg" alt="">
 
                         <div class="recent-content position-absolute">
                             <h6 class="text-center mr">Some of our </h6>
@@ -408,7 +399,7 @@
                     </div>
                     <div class="recent-image position-relative">
 
-                        <img src="{{url('inc/Frontend/')}}/img/logo (1).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend/')}}/img/logo (1).jpg" alt="">
 
                         <div class="recent-content position-absolute">
                             <h6 class="text-center mr">Some of our </h6>
@@ -417,7 +408,7 @@
                     </div>
                     <div class="recent-image position-relative">
 
-                        <img src="{{url('inc/Frontend/')}}/img/logo (1).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend/')}}/img/logo (1).jpg" alt="">
 
                         <div class="recent-content position-absolute">
                             <h6 class="text-center mr">Some of our </h6>
@@ -426,7 +417,16 @@
                     </div>
                     <div class="recent-image position-relative">
 
-                        <img src="{{url('inc/Frontend/')}}/img/logo (1).jpg" alt="">
+                        <img src="{{asset('Inc/Frontend/')}}/img/logo (1).jpg" alt="">
+
+                        <div class="recent-content position-absolute">
+                            <h6 class="text-center mr">Some of our </h6>
+                        </div>
+
+                    </div>
+                    <div class="recent-image position-relative">
+
+                        <img src="{{asset('Inc/Frontend/')}}/img/logo (1).jpg" alt="">
 
                         <div class="recent-content position-absolute">
                             <h6 class="text-center mr">Some of our </h6>
@@ -442,8 +442,8 @@
 
     </section>
 
-    <section class="our-shak-bg" style="background-image: url('{{url('inc/Frontend')}}/img/pc.jpg')">
-        <div class="container">
+    <section class="our-shak-bg" style="background-image: url('{{asset('Inc/Frontend')}}/img/pc.jpg')">
+        <div class="container" style="max-width: 100% !important;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-center">

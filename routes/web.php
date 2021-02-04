@@ -71,6 +71,8 @@ Route::group(['prefix'=>'user'],function (){
         Route::get('pending-order',[OrderController::class,'pending'])->name('order.pending');
         Route::get('complete-order',[OrderController::class,'complete'])->name('order.complete');
         Route::get('all-order',[OrderController::class,'all'])->name('order.all');
+        Route::get('all-order/{id}',[OrderController::class,'allSoftDelete'])->name('order.allSoftDelete');
+        Route::get('pending-order/{id}',[OrderController::class,'allSoftDeletePending'])->name('order.allSoftDeletePending');
     });
 
 });

@@ -22,6 +22,7 @@ class CreateOrdersTable extends Migration
             $table->longText('description');
             $table->tinyInteger('status');
             $table->string('thumbnail');
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
@@ -37,5 +38,7 @@ class CreateOrdersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('orders');
+
+
     }
 }

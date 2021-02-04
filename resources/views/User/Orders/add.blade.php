@@ -26,6 +26,14 @@
             <div class="row">
                 <!-- left column -->
                 <div class="card  col-md-9" style="background: #dad9da; padding-bottom: 40px; margin: 0 auto">
+                    @if(session()->has('message'))
+                        <div class="alert alert-{{session('type')}} alert-dismissible fade show" role="alert">
+                            <strong>{{session('message')}}</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
 
 
                             <form method="post" action="{{route('order.store')}}"  class="free-bg-drag" enctype="multipart/form-data">
@@ -71,7 +79,7 @@
                             <div class="form-group p-relative">
 
                                 <select name="time" class="form-control name" id="skb">
-                                    <option>Select Day</option>
+
 
                                     @for ($i = 1; $i <= 90; $i++)
                                         echo "<option>{{$i}} Day</option>";

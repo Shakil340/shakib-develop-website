@@ -58,7 +58,7 @@
 
                                     <td>{{$pen->status == 1 ? '' : 'Pending'}}</td>
                                     <td>
-                                        <a href="">Cancel</a>
+                                        <a href="{{route('order.allSoftDeletePending',$pen->id)}}">Cancel</a>
                                     </td>
 
                                 </tr>

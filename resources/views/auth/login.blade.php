@@ -94,14 +94,28 @@
                         </form>
 
                         <div class="forget-page">
+                            <form method="POST" action="{{ route('password.email') }}">
+                                @csrf
                             <div class="group">
                                 <label for="skl" class="label">Email</label>
-                                <input id="skl" type="email" class="input" placeholder="Enter Your Email" /></div>
-                            <div class="group">    @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif</div>
+                                <input id="skl" type="email" name="email" value="{{ old('email') }}" class="input" placeholder="Enter Your Email" />
+                            </div>
+                            <div class="group">
+
+                                @if (Route::has('password.request'))
+
+                                    <button type="submit" class="btn btn-primary w-100" style="font-size: 15px;">
+                                        {{ __('Send Password Reset Link') }}
+                                    </button>
+
+
+
+                                @endif
+
+
+
+                            </div>
+                            </form>
                             <div class="hr "></div>
                             <div class="foot"><label for="tab-2" class="tabs">Don't Have an Account?</label></div>
                         </div>
