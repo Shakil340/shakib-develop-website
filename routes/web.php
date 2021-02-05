@@ -3,8 +3,10 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Contact\SubjectController;
+use App\Http\Controllers\Admin\ExpertController;
 use App\Http\Controllers\Admin\FreeTrialController;
-use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\HomeServiceController;
+use App\Http\Controllers\Admin\RecentWorkController;
 use App\Http\Controllers\User\dashboardController;
 use App\Http\Controllers\User\OrderController;
 use Illuminate\Support\Facades\Auth;
@@ -42,7 +44,7 @@ use App\Http\Controllers\Admin\SliderController;
 
 Auth::routes();
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeServiceController::class, 'index'])->name('home');
 
 Route::group(['prefix'=>'admin'],function (){
     Route::group(['middleware'=>'admin.guest'], function (){
@@ -166,19 +168,38 @@ Route::prefix('/service')->name('service.')->group(function(){
 
 //Slider Page Routes
 
-Route::prefix('slider')->name('slider.')->group(function(){
-    Route::get('/manage',[SliderController::class,'index'])->name('index');
-    Route::get('/create',[SliderController::class,'create'])->name('create');
-    Route::post('/store',[SliderController::class,'store'])->name('store');
+Route::prefix('slider/')->name('slider.')->group(function(){
+    Route::get('manage',[SliderController::class,'index'])->name('index');
+    Route::get('create',[SliderController::class,'create'])->name('create');
+    Route::post('store',[SliderController::class,'store'])->name('store');
+    Route::get('edit/{id}',[SliderController::class,'edit'])->name('edit');
+    Route::put('update',[SliderController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[SliderController::class,'delete'])->name('delete');
 });
 
 
 //HomeService Page Routes
 
-Route::prefix('home_service')->name('home_service.')->group(function(){
-    Route::get('/manage',[HomeController::class,'index'])->name('index');
-    Route::get('/create',[HomeController::class,'create'])->name('create');
-    Route::post('/store',[HomeController::class,'store'])->name('store');
+Route::prefix('home-service')->name('home_service.')->group(function(){
+    Route::get('/manage',[HomeServiceController::class,'index'])->name('index');
+    Route::get('/create',[HomeServiceController::class,'create'])->name('create');
+    Route::post('/store',[HomeServiceController::class,'store'])->name('store');
+});
+
+//Recent Work Page Routes
+
+Route::prefix('recent-work')->name('recent_work.')->group(function(){
+    Route::get('/manage',[RecentWorkController::class,'index'])->name('index');
+    Route::get('/create',[RecentWorkController::class,'create'])->name('create');
+    Route::post('/store',[RecentWorkController::class,'store'])->name('store');
+});
+
+//Expert Work Page Routes
+
+Route::prefix('expert-work')->name('expert_work.')->group(function(){
+    Route::get('/manage',[ExpertController::class,'index'])->name('index');
+    Route::get('/create',[ExpertController::class,'create'])->name('create');
+    Route::post('/store',[ExpertController::class,'store'])->name('store');
 });
 
 //Subject Page Routes

@@ -44,30 +44,25 @@
                                 <thead>
                                 <tr>
                                     <th>Sl</th>
-                                    <th>Image 1</th>
-                                    <th>Image 2</th>
-                                    <th>Image 3</th>
-                                    <th>Image 4</th>
-                                    <th>Image 5</th>
+                                    <th>Title</th>
+                                    <th>Sub Title</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($sliders as $slider)
+                                @foreach($experts as $expert)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
-                                        <td><img src="{{asset('uploads/image/'.$slider->img1)}}" width="80px"></td>
-                                        <td><img src="{{asset('uploads/image/'.$slider->img2)}}" width="80px"></td>
-                                        <td><img src="{{asset('uploads/image/'.$slider->img3)}}" width="80px"></td>
-                                        <td><img src="{{asset('uploads/image/'.$slider->img4)}}" width="80px"></td>
-                                        <td><img src="{{asset('uploads/image/'.$slider->img5)}}" width="80px"></td>
+                                        <td>{{$expert->title}}</td>
+                                        <td>{{$expert->subTitle}}</td>
 
 
-                                        <td>{{$slider->status == 1 ? 'Active' : 'Inactive'}}</td>
+
+                                        <td>{{$expert->status == 1 ? 'Active' : 'Inactive'}}</td>
                                         <td>
-                                                                        <a class="btn btn-warning text-white btn-xs" href="{{route('slider.edit',$slider->id)}}"><i class="fas text-white fa-pencil-alt"></i>Edit</a>
-                                                                        <a class="btn btn-danger btn-xs" href="{{route('slider.delete',$slider->id)}}"><i class="far fa-trash-alt"></i>Delete</a>
+{{--                                                                        <a class="btn btn-warning text-white btn-xs" href="{{route('slider.edit',$slider->id)}}"><i class="fas text-white fa-pencil-alt"></i>Edit</a>--}}
+{{--                                                                        <a class="btn btn-danger btn-xs" href="{{route('slider.delete',$slider->id)}}"><i class="far fa-trash-alt"></i>Delete</a>--}}
                                         </td>
                                     </tr>
                                 @endforeach

@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Slider extends Model
+class RecentWork extends Model
 {
     use HasFactory;
-
-    protected $guarded=[];
+    protected  $guarded=[];
 }

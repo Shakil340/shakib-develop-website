@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHomeServiecsTable extends Migration
+class CreateExpertsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateHomeServiecsTable extends Migration
      */
     public function up()
     {
-        Schema::create('home_serviecs', function (Blueprint $table) {
+        Schema::create('experts', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->string('url');
-            $table->longText('content');
-            $table->string('thumbnail');
+            $table->string('title');
+            $table->string('subTitle');
             $table->tinyInteger('status');
             $table->timestamps();
         });
@@ -31,6 +29,6 @@ class CreateHomeServiecsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_serviecs');
+        Schema::dropIfExists('experts');
     }
 }

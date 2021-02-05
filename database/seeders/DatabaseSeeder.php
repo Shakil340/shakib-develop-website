@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
             SubjectTableSeeder::class,
             CategoryTableSeeder::class,
             AdminTableSeeder::class,
-            ServiceTableSeeder::class
+            ServiceTableSeeder::class,
+            RecentWorkTableSeeder::class,
+            ExpertTableSeeder::class
 
         ]);
     }

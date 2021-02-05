@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHomeServiecsTable extends Migration
+class CreateRecentWorksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateHomeServiecsTable extends Migration
      */
     public function up()
     {
-        Schema::create('home_serviecs', function (Blueprint $table) {
+        Schema::create('recent_works', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->string('url');
-            $table->longText('content');
+            $table->string('title');
             $table->string('thumbnail');
             $table->tinyInteger('status');
             $table->timestamps();
@@ -31,6 +29,6 @@ class CreateHomeServiecsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_serviecs');
+        Schema::dropIfExists('recent_works');
     }
 }

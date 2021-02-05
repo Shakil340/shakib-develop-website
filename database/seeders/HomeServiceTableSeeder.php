@@ -18,10 +18,9 @@ class HomeServiceTableSeeder extends Seeder
 
         foreach (range(1,10) as $index) {
             HomeServiec::create([
-                'main_title'=>$faker->sentence,
-                'main_sub_title'=>$faker->sentence,
                 'title'=>$faker->sentence,
                 'content'=>$faker->paragraph,
+                'url'=>$faker->url,
                 'thumbnail'=>$faker->imageUrl($width = 383, $height = 240),
                 'status'=>rand(0,1)
             ]);

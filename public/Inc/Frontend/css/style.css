@@ -1013,3 +1013,10 @@ label.custom-label {
      transition: none;
      border: none;
 }
+
+.recent-image:last-child {
+    margin-right: 12px !important;
+}
+.recent-image:first-child {
+    margin-left: 12px !important;
+}
