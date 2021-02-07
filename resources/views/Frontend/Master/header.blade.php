@@ -23,7 +23,7 @@
 
 <body style="margin: 0px">
 <header class="bg-danger bg-header">
-    <div class="container">
+    <div class="container" style="max-width: 1300px !important;">
         <nav class="navbar navbar-expand-lg ">
             <a class="navbar-brand" href="{{route('home')}}"><img style="width: 110px;" src="{{asset('Inc/Frontend/')}}/img/skl.png" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -34,18 +34,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+
+                    <li class="nav-item active padd">
                         <a class="nav-link" href="{{route('home')}}">Home </a>
                     </li>
 
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown padd">
                         <a class="nav-link dropdown-toggle" href="#">
                             Services
                         </a>
                         <ul class="dropdown-menu2">
-                            <li class="nav-item">
-                                <a class="dropdown-item" href="#">Photoshop Services<i
-                                        class="fas fa-caret-down"></i></a>
+                            <li class="nav-item skk">
+                                <a class="dropdown-item" href="#">Photoshop Services
+                                    <i
+                                        class="fas fa-caret-down sks"></i></a>
                                 <ul class="dropdown-menu3">
                                     <li class="nav-item"><a class="dropdown-item" href="{{route('service.clipping-path')}}">Image
                                             Clipping Path</a></li>
@@ -64,9 +66,9 @@
                                                             href="{{route('service.background-remove')}}">Background Remove</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item skkk">
                                 <a class="dropdown-item" href="#">Illustrator Services<i
-                                        class="fas fa-caret-down"></i></a>
+                                        class="fas fa-caret-down skss"></i></a>
                                 <ul class="dropdown-menu4">
                                     <li class="nav-item"><a class="dropdown-item" href="{{route('service.logo-design')}}">Logo
                                             Design</a></li>
@@ -87,38 +89,41 @@
                         </ul>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item padd">
                         <a class="nav-link" href="{{route('why-us')}}">Why Us</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item padd">
                         <a class="nav-link" href="{{route('portfolio')}}">Protfolio</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item padd">
                         <a class="nav-link" href="{{route('free-trial')}}">Free Trial </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item padd">
                         <a class="nav-link" href="{{route('order-now')}}">Order Now</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item padd">
                         <a class="nav-link" href="{{route('contact-us')}}">Contact Us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item padd">
                         <a class="nav-link" href="{{route('about-us')}}">About</a>
                     </li>
                     @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('login')}}">Login/Register</a>
+                    <li class="nav-item padd" style="margin-left: 250px; ">
+                        <a class="nav-link" style="background: #428bca; " href="{{route('login')}}">Login/Register</a>
                     </li>
 
                     @else
+                        <li class="nav-item padd" style="margin-left: 190px ">
+                            <a class="nav-link" style="background: #428bca; " href="{{route('order-now')}}">Dashboard</a>
+                        </li>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <li class="nav-item">
-                            <a class="nav-link" href="{{ route('logout') }}"
+                            <li class="nav-item padd" style="margin-left: 16px; ">
+                            <a class="nav-link" style="background: #428bca; "  href="{{ route('logout') }}"
                                                        onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Logout') }}
@@ -128,10 +133,10 @@
                     @endguest
 
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" name="s" type="search" placeholder="Search"
-                           aria-label="Search" />
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline  p-relative">
+                    <input class="form-control"  type="search" placeholder="Search"
+                            />
+                    <button class="btn bsk" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
         </nav>

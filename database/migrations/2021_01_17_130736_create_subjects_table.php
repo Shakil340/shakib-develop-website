@@ -15,12 +15,11 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('status');
             $table->timestamps();
 
-            $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
+
         });
     }
 

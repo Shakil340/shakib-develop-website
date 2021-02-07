@@ -62,14 +62,14 @@
 
                             <ul class="check">
 
-                                
+
                                 @foreach($subTitle as $sub)
-                              
-                         
+
+
                              <li>{{$sub->name }}</li>
 
-                      
-                      
+
+
                                 @endforeach
 
                             </ul>
@@ -194,7 +194,7 @@
 
                 <div class="col-md-4">
                     <div class="our-order text-center">
-                        <a href="free-trial.html" class="text-white">
+                        <a href="{{route('free-trial')}}" class="text-white">
                             <h4>Free Trial</h4>
                             <p>You Can Check Our Quality</p>
                         </a>
@@ -203,7 +203,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="our-order text-center">
-                        <a href="contact.html" class="text-white">
+                        <a href="{{route('contact-us')}}" class="text-white">
                             <h4>Contact Us</h4>
                             <p>We will be come to you within 1 hour</p>
 
@@ -213,7 +213,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="our-order text-center">
-                        <a href="order.html" class="text-white">
+                        <a href="{{route('order-now')}}" class="text-white">
                             <h4>Place new order</h4>
                             <p>Place Your Order Here Anytime</p>
                         </a>

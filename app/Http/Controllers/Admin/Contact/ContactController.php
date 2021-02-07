@@ -27,14 +27,6 @@ class ContactController extends Controller
                     ->first();
             }
 
-//            $contacts = new Contact();
-//            $contacts->user_id=Auth::id();
-//            $contacts->subject_id = $req->subject_id;
-//            $contacts->ip_address = $req->ip();
-//            $contacts->name = $req->name;
-//            $contacts->email = $req->email;
-//            $contacts->message = $req->message;
-//            $contacts->save();
 
             $contacts =  Contact::create([
                 'user_id'=>Auth::id(),
@@ -49,11 +41,6 @@ class ContactController extends Controller
         }catch (\Exception $e){
             $this->setErrorMessage($e->getMessage());
         }
-
-
-
-
-
 
         return redirect()->back();
     }

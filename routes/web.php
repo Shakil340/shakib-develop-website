@@ -173,7 +173,7 @@ Route::prefix('/service')->name('service.')->group(function(){
 
 //Slider Page Routes
 
-Route::prefix('slider/')->name('slider.')->group(function(){
+Route::prefix('slider/')->name('slider.')->middleware('admin.auth')->group(function(){
     Route::get('manage',[SliderController::class,'index'])->name('index');
     Route::get('create',[SliderController::class,'create'])->name('create');
     Route::post('store',[SliderController::class,'store'])->name('store');
@@ -185,7 +185,7 @@ Route::prefix('slider/')->name('slider.')->group(function(){
 
 //HomeService Page Routes
 
-Route::prefix('home-service')->name('home_service.')->group(function(){
+Route::prefix('home-service')->name('home_service.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[HomeServiceController::class,'index'])->name('index');
     Route::get('/create',[HomeServiceController::class,'create'])->name('create');
     Route::post('/store',[HomeServiceController::class,'store'])->name('store');
@@ -193,7 +193,7 @@ Route::prefix('home-service')->name('home_service.')->group(function(){
 
 //Recent Work Page Routes
 
-Route::prefix('recent-work')->name('recent_work.')->group(function(){
+Route::prefix('recent-work')->name('recent_work.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[RecentWorkController::class,'index'])->name('index');
     Route::get('/create',[RecentWorkController::class,'create'])->name('create');
     Route::post('/store',[RecentWorkController::class,'store'])->name('store');
@@ -201,7 +201,7 @@ Route::prefix('recent-work')->name('recent_work.')->group(function(){
 
 //Expert Work Page Routes
 
-Route::prefix('expert-work')->name('expert_work.')->group(function(){
+Route::prefix('expert-work')->name('expert_work.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[ExpertController::class,'index'])->name('index');
     Route::get('/create',[ExpertController::class,'create'])->name('create');
     Route::post('/store',[ExpertController::class,'store'])->name('store');
@@ -209,16 +209,19 @@ Route::prefix('expert-work')->name('expert_work.')->group(function(){
 
 //Subject Page Routes
 
-Route::prefix('contact-us')->name('contact-us.')->group(function(){
+Route::prefix('contact-us')->name('contact-us.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[SubjectController::class,'index'])->name('index');
     Route::get('/create',[SubjectController::class,'create'])->name('create');
     Route::post('/store',[SubjectController::class,'store'])->name('store');
+    Route::get('/edit/{id}',[SubjectController::class,'edit'])->name('edit');
+    Route::delete('/delete/{id}',[SubjectController::class,'delete'])->name('delete');
+    Route::put('/update',[SubjectController::class,'update'])->name('update');
 });
 
 
 //Contact-Us Page Routes
 
-Route::prefix('contact')->name('contact.')->group(function(){
+Route::prefix('contact')->name('contact.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[ContactController::class,'index'])->name('index');
     Route::post('/store',[ContactController::class,'store'])->name('store');
 
@@ -226,7 +229,7 @@ Route::prefix('contact')->name('contact.')->group(function(){
 
 //Protfolliow Page Routes
 
-Route::prefix('portfolliow')->name('portfolliow.')->group(function(){
+Route::prefix('portfolliow')->name('portfolliow.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[PortfolioController::class,'index'])->name('index');
     Route::post('/store',[PortfolioController::class,'store'])->name('store');
 
@@ -234,7 +237,7 @@ Route::prefix('portfolliow')->name('portfolliow.')->group(function(){
 
 //Home Service Sub Title Page Routes
 
-Route::prefix('home-service-sub-title')->name('home-sub.')->group(function(){
+Route::prefix('home-service-sub-title')->name('home-sub.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[HomeServiceSubTitleController::class,'index'])->name('index');
     Route::get('/create',[HomeServiceSubTitleController::class,'create'])->name('create');
     Route::post('/store',[HomeServiceSubTitleController::class,'store'])->name('store');
@@ -243,7 +246,7 @@ Route::prefix('home-service-sub-title')->name('home-sub.')->group(function(){
 
 //Category Page Routes
 
-Route::prefix('category')->name('category.')->group(function(){
+Route::prefix('category')->name('category.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[CategoryController::class,'index'])->name('index');
     Route::get('/create',[CategoryController::class,'create'])->name('create');
     Route::post('/store',[CategoryController::class,'store'])->name('store');
@@ -254,14 +257,7 @@ Route::prefix('category')->name('category.')->group(function(){
 });
 
 
-//Contact-Us Page Routes
-
-
-
-
-
-
-
+//User Page Routes
 Route::prefix('user')->name('user.')->group(function(){
     Route::get('/dashboard',[dashboardController::class,'index'])->name('index');
     Route::post('/logout',[dashboardController::class,'logout'])->name('logout');
@@ -271,7 +267,7 @@ Route::prefix('user')->name('user.')->group(function(){
 
 //Free-Trial Page Routes
 
-Route::prefix('free-trial')->name('free-trial.')->group(function(){
+Route::prefix('free-trial')->name('free-trial.')->middleware('admin.auth')->group(function(){
     Route::get('/manage',[FreeTrialController::class,'index'])->name('index');
     Route::post('/store',[FreeTrialController::class,'store'])->name('store');
     Route::get('/single/{id}',[FreeTrialController::class,'single'])->name('single');

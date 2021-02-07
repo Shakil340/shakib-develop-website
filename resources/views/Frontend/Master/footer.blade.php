@@ -7,13 +7,13 @@
                     <div class="widget">
                         <h4>OUR MAIN SERVICES</h4>
                         <ul>
-                            <li><a href="logo-design.html">Logo Design</a></li>
-                            <li><a href="business-card.html">Bussiness Card Design</a></li>
-                            <li><a href="ads.html">Baner Design</a></li>
-                            <li><a href="clipping-path.html">Image Clipping Path</a></li>
-                            <li><a href="image-retouching.html">Image Retouching</a></li>
-                            <li><a href="image-manipulation.html">Image Manipulation</a></li>
-                            <li><a href="photo-resizing.html">Image Resizing</a></li>
+                            <li><a href="{{route('service.logo-design')}}">Logo Design</a></li>
+                            <li><a href="{{route('service.business-card-design')}}">Bussiness Card Design</a></li>
+                            <li><a href="{{route('service.ads-design')}}">Baner Design</a></li>
+                            <li><a href="{{route('service.clipping-path')}}">Image Clipping Path</a></li>
+                            <li><a href="{{route('service.image-retouching')}}">Image Retouching</a></li>
+                            <li><a href="{{route('service.image-manipulation')}}">Image Manipulation</a></li>
+                            <li><a href="{{route('service.photo-resizing')}}">Image Resizing</a></li>
                             <li><a href="other.html">Other</a></li>
                         </ul>
                     </div>
@@ -22,14 +22,14 @@
                     <div class="widget">
                         <h4>IMPORTANT LINKS</h4>
                         <ul>
-                            <li><a href="why-us.html"> Why Choose Us</a></li>
-                            <li><a href="index.html"> Terms of Use</a></li>
-                            <li><a href="free-trial.html"> Free Trial</a></li>
-                            <li><a href="free-trial.html">Upload File</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="order.html">Order Now</a></li>
-                            <li><a href="index.html"> Recent Work</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="{{route('why-us')}}"> Why Choose Us</a></li>
+                            <li><a href="{{route('home')}}"> Terms of Use</a></li>
+                            <li><a href="{{route('free-trial')}}"> Free Trial</a></li>
+                            <li><a href="{{route('free-trial')}}">Upload File</a></li>
+                            <li><a href="{{route('contact-us')}}">Contact Us</a></li>
+                            <li><a href="{{route('order-now')}}">Order Now</a></li>
+                            <li><a href="{{route('portfolio')}}"> Recent Work</a></li>
+                            <li><a href="{{route('about-us')}}">About</a></li>
                         </ul>
                     </div>
                 </div>
