@@ -42,7 +42,9 @@
                 </div>
 
                 @php
-                use App\Models\HomeServiec;$homeServices = HomeServiec::where('status',1)->take(9)->get();
+                use App\Models\HomeServiceSubTitle;use App\Models\HomeService;$homeServices = HomeService::where('status',1)->take(9)->get();
+                $subTitle = HomeServiceSubTitle::with('shakil')->where('status',1)->get();
+
                 @endphp
                 @foreach($homeServices as $homeService)
                 <div class="col-md-4">
@@ -59,13 +61,17 @@
                             </a>
 
                             <ul class="check">
-                                <li>Cut Out Photo/Image</li>
-                                <li>Simple Clipping Path Services</li>
-                                <li>Standard Clipping Path Services</li>
-                                <li>Complex Clipping Path Service</li>
-                                <li>Super Complex Clipping Path Services </li>
-                                <li>100% Customer Satisfaction </li>
-                                <li>Do FREE TRIAL Image (if needed) </li>
+
+                                
+                                @foreach($subTitle as $sub)
+                              
+                         
+                             <li>{{$sub->name }}</li>
+
+                      
+                      
+                                @endforeach
+
                             </ul>
                         </div>
                     </div>

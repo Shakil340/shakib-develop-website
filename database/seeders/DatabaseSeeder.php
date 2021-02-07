@@ -23,7 +23,15 @@ class DatabaseSeeder extends Seeder
             AdminTableSeeder::class,
             ServiceTableSeeder::class,
             RecentWorkTableSeeder::class,
-            ExpertTableSeeder::class
+            ExpertTableSeeder::class,
+            ProtfolliowTableSeeder::class,
+            ImageRetouchingTableSeeder::class,
+            BackgroundRemoveTableSeeder::class,
+            PhotoResizingTableSeeder::class,
+            ColorCorrectionTableSeeder::class,
+            LogoDesignTableSeeder::class,
+            RasterToVectorTableSeeder::class
+
 
         ]);
     }

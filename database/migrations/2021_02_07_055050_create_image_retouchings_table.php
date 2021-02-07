@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHomeServiecsTable extends Migration
+class CreateImageRetouchingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateHomeServiecsTable extends Migration
      */
     public function up()
     {
-        Schema::create('home_serviecs', function (Blueprint $table) {
+        Schema::create('image_retouchings', function (Blueprint $table) {
             $table->id();
-            $table->text('title');
-            $table->string('url');
-            $table->longText('content');
-            $table->string('thumbnail');
-            $table->tinyInteger('status');
+            $table->string('img1')->nullable();
+            $table->string('img2')->nullable();
+            $table->string('img3')->nullable();
+            $table->string('img4')->nullable();
+            $table->tinyInteger('status')->default(0);
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateHomeServiecsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('home_serviecs');
+        Schema::dropIfExists('image_retouchings');
     }
 }

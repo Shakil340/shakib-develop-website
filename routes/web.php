@@ -1,14 +1,18 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Contact\SubjectController;
 use App\Http\Controllers\Admin\ExpertController;
 use App\Http\Controllers\Admin\FreeTrialController;
 use App\Http\Controllers\Admin\HomeServiceController;
+use App\Http\Controllers\Admin\HomeServiceSubTitleController;
+use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\RecentWorkController;
 use App\Http\Controllers\User\dashboardController;
 use App\Http\Controllers\User\OrderController;
+use App\Models\HomeServiceSubTitle;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
@@ -75,6 +79,7 @@ Route::group(['prefix'=>'user'],function (){
         Route::get('all-order',[OrderController::class,'all'])->name('order.all');
         Route::get('all-order/{id}',[OrderController::class,'allSoftDelete'])->name('order.allSoftDelete');
         Route::get('pending-order/{id}',[OrderController::class,'allSoftDeletePending'])->name('order.allSoftDeletePending');
+
     });
 
 });
@@ -216,6 +221,35 @@ Route::prefix('contact-us')->name('contact-us.')->group(function(){
 Route::prefix('contact')->name('contact.')->group(function(){
     Route::get('/manage',[ContactController::class,'index'])->name('index');
     Route::post('/store',[ContactController::class,'store'])->name('store');
+
+});
+
+//Protfolliow Page Routes
+
+Route::prefix('portfolliow')->name('portfolliow.')->group(function(){
+    Route::get('/manage',[PortfolioController::class,'index'])->name('index');
+    Route::post('/store',[PortfolioController::class,'store'])->name('store');
+
+});
+
+//Home Service Sub Title Page Routes
+
+Route::prefix('home-service-sub-title')->name('home-sub.')->group(function(){
+    Route::get('/manage',[HomeServiceSubTitleController::class,'index'])->name('index');
+    Route::get('/create',[HomeServiceSubTitleController::class,'create'])->name('create');
+    Route::post('/store',[HomeServiceSubTitleController::class,'store'])->name('store');
+
+});
+
+//Category Page Routes
+
+Route::prefix('category')->name('category.')->group(function(){
+    Route::get('/manage',[CategoryController::class,'index'])->name('index');
+    Route::get('/create',[CategoryController::class,'create'])->name('create');
+    Route::post('/store',[CategoryController::class,'store'])->name('store');
+    Route::get('/edit/{id}',[CategoryController::class,'edit'])->name('edit');
+    Route::delete('/delete/{id}',[CategoryController::class,'delete'])->name('delete');
+    Route::put('/update',[CategoryController::class,'update'])->name('update');
 
 });
 

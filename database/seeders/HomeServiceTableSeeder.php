@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\HomeServiec;
+use App\Models\HomeService;
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 class HomeServiceTableSeeder extends Seeder
@@ -17,7 +17,7 @@ class HomeServiceTableSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1,10) as $index) {
-            HomeServiec::create([
+            HomeService::create([
                 'title'=>$faker->sentence,
                 'content'=>$faker->paragraph,
                 'url'=>$faker->url,

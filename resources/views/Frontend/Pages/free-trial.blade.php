@@ -45,7 +45,7 @@
                                 <div class="form-group files color">
                                     <span class="drag-icon"><i class="fas fa-cloud-upload-alt"></i></span>
                                     <h4>Drag & Drop Files Here</h4>
-                                    <input type="file" name="thumbnail[]" class="form-control drag-opacity" multiple id="multiple">
+                                    <input type="file" name="thumbnail" class="form-control drag-opacity">
 
 
                                 </div>

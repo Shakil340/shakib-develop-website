@@ -23,31 +23,16 @@ class FreeTrialController extends Controller
 
         try {
 
-//            if ($req->hasFile('thumbnail')){
-//                $skb = 0;
-//                foreach ($req->file('thumbnail') as $file){
-//                    $file_ex= $file->getClientOriginalExtension();
-//                    $file_name = rand(1,100).rand(1000,2000).$skb.'.'.$file_ex;
-//                    Image::make($file)->resize(268, 249)->save(public_path('uploads/image/'.$file_name));
-//
-//                    $skb++;
-//                }
-//            }
-        if ($req->hasFile('thumbnail')){
+        if ($req->hasFile('thumbnail')) {
 
-            $images =[];
-            $skb=0;
-            foreach ($req->file('thumbnail') as $file){
-                $file_ex= $file->getClientOriginalExtension();
-                $file_name = rand(1,100).rand(1000,2000).$skb.'.'.$file_ex;
 
-                Image::make($file)->save(public_path('uploads/image/'.$file_name));
-                $images[]=$file_name;
+            $file = $req->file('thumbnail');
+            $file_ex = $file->getClientOriginalExtension();
+            $file_name = rand(1, 100) . rand(1000, 2000) . '.' . $file_ex;
+            $file->move(public_path('uploads/image/'), $file_name);
 
-                $skb++;
-
-            }
         }
+
 
         $req->validate([
            'number'=>' numeric'
@@ -59,7 +44,7 @@ class FreeTrialController extends Controller
                 'email'=>$req->email,
                 'location'=>$req->location,
                 'number'=>$req->number,
-                'thumbnail'=>json_encode($images),
+                'thumbnail'=>$file_name,
                 'message'=>$req->message,
                 'category_id'=>$req->category_id
             ]);

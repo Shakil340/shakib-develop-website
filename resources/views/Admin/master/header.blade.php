@@ -39,6 +39,13 @@
                 </span>
                 <span style="margin-right: 22px;margin-left: 4px; font-size: 18px">
 
+                        @if(Auth::guard('admin')->check())
+
+                    {{Auth::guard('admin')->user()->name}}
+
+                        @endif
+
+
                 </span>
             </Li>
             <Li>
