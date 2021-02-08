@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class ContactController extends Controller
 {
     public function index(){
-        $contacts = Contact::get();
+        $contacts = Contact::with('subject')->get();
         return view('Admin.Contact-Us.manage',compact('contacts'));
     }
 

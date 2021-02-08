@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\HomeServiceController;
 use App\Http\Controllers\Admin\HomeServiceSubTitleController;
 use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\RecentWorkController;
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\User\dashboardController;
 use App\Http\Controllers\User\OrderController;
 use App\Models\HomeServiceSubTitle;
@@ -58,6 +59,11 @@ Route::group(['prefix'=>'admin'],function (){
     Route::group(['middleware'=>'admin.auth'], function (){
         Route::view('dashboard','Admin.master.dashboard')->name('admin.home');
         Route::post('logout',[AdminController::class,'logout'])->name('admin.logout');
+        Route::get('all-orders',[OrderController::class,'adminAll'])->name('admin.order');
+        Route::get('order-edit/{id}',[OrderController::class,'edit'])->name('admin.order.edit');
+        Route::put('order-update',[OrderController::class,'update'])->name('admin.order.update');
+        Route::get('order-single/{id}',[OrderController::class,'single'])->name('admin.order.single');
+        Route::get('order-download/{id}',[OrderController::class,'download'])->name('admin.order.download');
     });
 });
 Route::group(['prefix'=>'user'],function (){
@@ -253,6 +259,18 @@ Route::prefix('category')->name('category.')->middleware('admin.auth')->group(fu
     Route::get('/edit/{id}',[CategoryController::class,'edit'])->name('edit');
     Route::delete('/delete/{id}',[CategoryController::class,'delete'])->name('delete');
     Route::put('/update',[CategoryController::class,'update'])->name('update');
+
+});
+
+//Service Page Routes
+
+Route::prefix('service')->name('service.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[ServiceController::class,'index'])->name('index');
+    Route::get('/create',[ServiceController::class,'create'])->name('create');
+    Route::post('/store',[ServiceController::class,'store'])->name('store');
+    Route::get('/edit/{id}',[ServiceController::class,'edit'])->name('edit');
+    Route::delete('/delete/{id}',[ServiceController::class,'delete'])->name('delete');
+    Route::put('/update',[ServiceController::class,'update'])->name('update');
 
 });
 

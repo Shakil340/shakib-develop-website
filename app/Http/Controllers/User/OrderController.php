@@ -65,4 +65,43 @@ class OrderController extends Controller
        $soft->delete();
        return redirect()->back();
     }
+
+
+    //Admin Dashboard Order Show All
+    public function adminAll(){
+        $orders = order::with('user')->withTrashed()->get();
+        return view('Admin.Orders.all',compact('orders'));
+    }
+
+    public function edit($id){
+        $order = order::withTrashed()->find($id);
+        return view('Admin.Orders.edit',compact('order'));
+    }
+
+    public function update(Request $req){
+        try {
+            order::where('id',$req->id)->update([
+                'status'=>$req->status
+            ]);
+            $this->setSuccessMessage('Order has been Update Successfully !');
+        }catch (\Exception $e){
+            $this->setErrorMessage($e->getMessage());
+        }
+        return redirect()->back();
+    }
+
+    public function single($id){
+        $orders = order::withTrashed()->where('id',$id)->get();
+        return view('Admin.Orders.Single',compact('orders'));
+    }
+
+    public function download($id){
+
+        $downloads = order::find($id);
+
+        $filepath = public_path('uploads/image/'.$id);
+
+        return response()->download($filepath);
+
+    }
 }

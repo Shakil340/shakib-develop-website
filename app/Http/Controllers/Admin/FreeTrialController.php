@@ -64,13 +64,12 @@ class FreeTrialController extends Controller
     }
 
     public function download($id){
-        $downloads = FreeTrial::where('id',$id)->get();
 
-        $item = $downloads->thumbnail;
+        $downloads = FreeTrial::find($id);
 
-        $filepath = public_path('uploads/image/').$item;
+        $filepath = public_path('uploads/image/'.$id);
 
-            return Response::download($filepath);
+            return response()->download($filepath);
 
     }
 }

@@ -47,8 +47,9 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Message</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
+                                    <th>Subject</th>
+
+
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -58,20 +59,9 @@
                                         <td>{{$contact->name}}</td>
                                         <td>{{$contact->email}}</td>
                                         <td>{{$contact->message}}</td>
+                                        <td>{{$contact->subject->name}}</td>
 
-                                        <td>{{$contact->status == 1 ? 'Active' : 'Inactive'}}</td>
-{{--                                        <td>--}}
-{{--                                            <a class="btn btn-warning text-white btn-xs" href="{{route('category.edit',$contact->id)}}"><i class="fas text-white fa-pencil-alt"></i>Edit</a>--}}
 
-{{--                                            <form method="post" action="{{route('category.delete',$contact->id)}}" class="d-inline-block">--}}
-{{--                                                @csrf--}}
-{{--                                                @method('delete')--}}
-
-{{--                                                <a class="btn btn-danger btn-xs" href="{{route('category.delete',$contact->id)}}" onclick="event.preventDefault();--}}
-{{--                                                            this.closest('form').submit();"><i class="far fa-trash-alt"></i>Delete</a>--}}
-{{--                                            </form>--}}
-
-{{--                                        </td>--}}
                                     </tr>
                                 @endforeach
 

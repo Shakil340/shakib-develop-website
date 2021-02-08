@@ -11,18 +11,14 @@
         </div>
         <div class="card-body">
             <div class="row " style="margin-left: 250px">
-                @foreach($singles as $single)
-                    @php
-                        $images = json_decode($single->thumbnail);
-                    @endphp
-                    @foreach($images as $image)
+                @foreach($singles as $image)
+
                 <div class="col-sm-2">
 
-                        <img src="{{asset('uploads/image/'.$image)}}" class="img-fluid mb-2" alt="white sample" width="80px">
-                        <a href="{{route('free-trial.download',$single->id)}}">Download</a>
+                    <img src="{{asset('uploads/image/'.$image->thumbnail)}}" class="img-fluid mb-2" alt="white sample" width="80px">
+                    <a href="{{route('free-trial.download',$image->thumbnail)}}">Download</a>
 
                 </div>
-                    @endforeach
                 @endforeach
 
             </div>
