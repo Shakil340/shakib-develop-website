@@ -22,7 +22,7 @@
 </head>
 
 <body style="margin: 0px">
-<header class="bg-danger bg-header">
+<header class="bg-danger bg-header header">
     <div class="container" style="max-width: 1300px !important;">
         <nav class="navbar navbar-expand-lg ">
             <a class="navbar-brand" href="{{route('home')}}"><img style="width: 110px;" src="{{asset('Inc/Frontend/')}}/img/skl.png" /></a>

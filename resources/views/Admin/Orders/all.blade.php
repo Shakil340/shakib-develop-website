@@ -42,7 +42,6 @@
                                     <th>Service</th>
                                     <th>Amount</th>
                                     <th>Time</th>
-                                    <th>Description</th>
                                     <th>Status</th>
                                     <th>Action</th>
 
@@ -62,7 +61,6 @@
                                         <td>{{$al->service->name}}</td>
                                         <td>{{$al->amount}}$</td>
                                         <td>{{$al->time}}</td>
-                                        <td>{{$al->description}}</td>
                                         @if($al->deleted_at == null)
                                         <td>{{$al->status == 1 ? 'Complete' : 'Pending'}}</td>
                                         @else

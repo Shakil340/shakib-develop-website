@@ -43,10 +43,22 @@
                                 <tbody>
 
                                 @foreach($orders as $al)
+                                    @php
+                                        $sk = 'skl skl';
+                                            $skl = explode('.',$al->thumbnail);
+                                            $thum = $skl[1];
+                                    @endphp
                                     <tr class="text-center">
                                         <td>10{{$al->id}}</td>
                                         <td>{{$al->description}}</td>
-                                        <td><img src="{{asset('uploads/image/'.$al->thumbnail)}}" alt="" width="80px"/>
+                                        <td>
+                                            @if($thum == 'zip')
+                                                {{$al->thumbnail}}
+                                            @else
+                                            <img src="{{asset('uploads/image/'.$al->thumbnail)}}" alt="" width="80px"/>
+                                            @endif
+
+
                                             <a href="{{route('admin.order.download',$al->thumbnail)}}">Download</a>
                                         </td>
 

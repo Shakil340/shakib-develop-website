@@ -55,6 +55,7 @@
                 <div class="col-md-3">
                     <div class="widget">
                         <h4> ABOUT US</h4>
+                        <a href="#" class="top">Scroll Top</a>
                         <p>Graphicsdesignpoint is a One Stop Solution of your all Graphic Design need. There are a
                             lot
                             of design firms or providers on the globe but not each every one send back excellent
@@ -71,6 +72,7 @@
                     <ul class="d-flex payment">
                         <li><a href="#"><img src="{{asset('Inc/Frontend')}}/img/paypal 2.png" alt="" style="width:150px ;"></a></li>
                         <li><a href="#"><img src="{{asset('Inc/Frontend')}}/img/payoneer.png" alt="" style="width:150px ;"></a></li>
+
                     </ul>
 
                 </div>
@@ -81,6 +83,7 @@
         </div>
 
     </div>
+
 </footer>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

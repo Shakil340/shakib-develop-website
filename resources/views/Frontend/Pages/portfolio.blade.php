@@ -9,30 +9,30 @@
             <div class="portfolio-image">
                 <h2 class="text-center">Clipping Path</h2>
                 @php
-                    use App\Models\Protfolliow;$protfollios = Protfolliow::get();
+                    use App\Models\Protfolliow;$protfollios = Protfolliow::latest()->where('status',1)->get();
                 @endphp
 
                     <div class="port-slider ">
                         @foreach($protfollios as $protfolliow)
 
 
-                        <a href="{{$protfolliow->img1}}" data-fancybox="gallery">
-                            <img src="{{$protfolliow->img1}}" alt="" />
+                        <a href="{{asset('uploads/image/'.$protfolliow->img1)}}" data-fancybox="gallery">
+                            <img src="{{asset('uploads/image/'.$protfolliow->img1)}}" alt="" />
 
                         </a>
 
-                            <a href="{{$protfolliow->img2}}" data-fancybox="gallery">
-                            <img src="{{$protfolliow->img2}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$protfolliow->img2)}}" data-fancybox="gallery">
+                            <img src="{{asset('uploads/image/'.$protfolliow->img2)}}" alt="" />
 
                         </a>
 
-                            <a href="{{$protfolliow->img3}}" data-fancybox="gallery">
-                            <img src="{{$protfolliow->img3}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$protfolliow->img3)}}" data-fancybox="gallery">
+                            <img src="{{asset('uploads/image/'.$protfolliow->img3)}}" alt="" />
 
                         </a>
 
-                            <a href="{{$protfolliow->img4}}" data-fancybox="gallery">
-                            <img src="{{$protfolliow->img4}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$protfolliow->img4)}}" data-fancybox="gallery">
+                            <img src="{{asset('uploads/image/'.$protfolliow->img4)}}" alt="" />
                         </a>
 
 
@@ -44,31 +44,32 @@
             <div class="portfolio-image">
                 <h2 class="text-center">Image Retouching</h2>
                 @php
-                    use App\Models\ImageRetouching;$images = ImageRetouching::where('status',1)->get();
+                    use App\Models\ImageRetouching;$images = ImageRetouching::latest()->where('status',1)->get();
                 @endphp
 
                     <div class="port-slider ">
                         @foreach($images as $image)
 
 
-                        <a href="{{$image->img1}}" data-fancybox="gallery">
-                            <img src="{{$image->img1}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$image->img1)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$image->img1)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$image->img2}}" data-fancybox="gallery">
-                            <img src="{{$image->img2}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$image->img2)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$image->img2)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$image->img3}}" data-fancybox="gallery">
-                            <img src="{{$image->img3}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$image->img3)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$image->img3)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$image->img4}}" data-fancybox="gallery">
-                            <img src="{{$image->img4}}" alt="" />
-                        </a>
+                            <a href="{{asset('uploads/image/'.$image->img4)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$image->img4)}}" alt="" />
+                            </a>
+
 
 
                         @endforeach
@@ -79,31 +80,32 @@
             <div class="portfolio-image">
                 <h2 class="text-center">Background Remove</h2>
                 @php
-                    use App\Models\BackgroundRemove;$backgrounds = BackgroundRemove::get();
+                    use App\Models\BackgroundRemove;$backgrounds = BackgroundRemove::where('status',1)->get();
                 @endphp
 
                     <div class="port-slider ">
                         @foreach($backgrounds as $background)
 
 
-                        <a href="{{$background->img1}}" data-fancybox="gallery">
-                            <img src="{{$background->img1}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$background->img1)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$background->img1)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$background->img2}}" data-fancybox="gallery">
-                            <img src="{{$background->img2}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$background->img2)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$background->img2)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$background->img3}}" data-fancybox="gallery">
-                            <img src="{{$background->img3}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$background->img3)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$background->img3)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$background->img4}}" data-fancybox="gallery">
-                            <img src="{{$background->img4}}" alt="" />
-                        </a>
+                            <a href="{{asset('uploads/image/'.$background->img4)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$background->img4)}}" alt="" />
+                            </a>
+
 
 
                         @endforeach
@@ -121,24 +123,25 @@
                         @foreach($photos as $photo)
 
 
-                        <a href="{{$photo->img1}}" data-fancybox="gallery">
-                            <img src="{{$photo->img1}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$photo->img1)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$photo->img1)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$photo->img2}}" data-fancybox="gallery">
-                            <img src="{{$photo->img2}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$photo->img2)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$photo->img2)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$photo->img3}}" data-fancybox="gallery">
-                            <img src="{{$photo->img3}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$photo->img3)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$photo->img3)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$photo->img4}}" data-fancybox="gallery">
-                            <img src="{{$photo->img4}}" alt="" />
-                        </a>
+                            <a href="{{asset('uploads/image/'.$photo->img4)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$photo->img4)}}" alt="" />
+                            </a>
+
 
 
                         @endforeach
@@ -156,24 +159,24 @@
                         @foreach($colors as $color)
 
 
-                        <a href="{{$color->img1}}" data-fancybox="gallery">
-                            <img src="{{$color->img1}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$color->img1)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$color->img1)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$color->img2}}" data-fancybox="gallery">
-                            <img src="{{$color->img2}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$color->img2)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$color->img2)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$color->img3}}" data-fancybox="gallery">
-                            <img src="{{$color->img3}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$color->img3)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$color->img3)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$color->img4}}" data-fancybox="gallery">
-                            <img src="{{$color->img4}}" alt="" />
-                        </a>
+                            <a href="{{asset('uploads/image/'.$color->img4)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$color->img4)}}" alt="" />
+                            </a>
 
 
                         @endforeach
@@ -191,24 +194,24 @@
                         @foreach($logos as $logo)
 
 
-                        <a href="{{$logo->img1}}" data-fancybox="gallery">
-                            <img src="{{$logo->img1}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$logo->img1)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$logo->img1)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$logo->img2}}" data-fancybox="gallery">
-                            <img src="{{$logo->img2}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$logo->img2)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$logo->img2)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$logo->img3}}" data-fancybox="gallery">
-                            <img src="{{$logo->img3}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$logo->img3)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$logo->img3)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$logo->img4}}" data-fancybox="gallery">
-                            <img src="{{$logo->img4}}" alt="" />
-                        </a>
+                            <a href="{{asset('uploads/image/'.$logo->img4)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$logo->img4)}}" alt="" />
+                            </a>
 
 
                         @endforeach
@@ -226,24 +229,24 @@
                         @foreach($rasters as $raster)
 
 
-                        <a href="{{$raster->img1}}" data-fancybox="gallery">
-                            <img src="{{$raster->img1}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$raster->img1)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$raster->img1)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$raster->img2}}" data-fancybox="gallery">
-                            <img src="{{$raster->img2}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$raster->img2)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$raster->img2)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$raster->img3}}" data-fancybox="gallery">
-                            <img src="{{$raster->img3}}" alt="" />
+                            <a href="{{asset('uploads/image/'.$raster->img3)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$raster->img3)}}" alt="" />
 
-                        </a>
+                            </a>
 
-                            <a href="{{$raster->img4}}" data-fancybox="gallery">
-                            <img src="{{$raster->img4}}" alt="" />
-                        </a>
+                            <a href="{{asset('uploads/image/'.$raster->img4)}}" data-fancybox="gallery">
+                                <img src="{{asset('uploads/image/'.$raster->img4)}}" alt="" />
+                            </a>
 
 
                         @endforeach

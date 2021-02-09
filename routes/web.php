@@ -1,19 +1,25 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BackgroundRemoveController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ColorCorrectionController;
 use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Contact\SubjectController;
 use App\Http\Controllers\Admin\ExpertController;
 use App\Http\Controllers\Admin\FreeTrialController;
 use App\Http\Controllers\Admin\HomeServiceController;
 use App\Http\Controllers\Admin\HomeServiceSubTitleController;
-use App\Http\Controllers\Admin\PortfolioController;
+use App\Http\Controllers\Admin\ImageRetouchingController;
+use App\Http\Controllers\Admin\LogoDesignController;
+use App\Http\Controllers\Admin\PhotoResizingController;
+use App\Http\Controllers\Admin\ProtfolliowController;
+use App\Http\Controllers\Admin\RasterToVectorController;
 use App\Http\Controllers\Admin\RecentWorkController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\User\dashboardController;
 use App\Http\Controllers\User\OrderController;
-use App\Models\HomeServiceSubTitle;
+use App\Models\Protfolliow;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SliderController;
@@ -235,9 +241,89 @@ Route::prefix('contact')->name('contact.')->middleware('admin.auth')->group(func
 
 //Protfolliow Page Routes
 
-Route::prefix('portfolliow')->name('portfolliow.')->middleware('admin.auth')->group(function(){
-    Route::get('/manage',[PortfolioController::class,'index'])->name('index');
-    Route::post('/store',[PortfolioController::class,'store'])->name('store');
+Route::prefix('portfolio')->name('portfolio.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[ProtfolliowController::class,'index'])->name('index');
+    Route::get('create',[ProtfolliowController::class,'create'])->name('create');
+    Route::post('store',[ProtfolliowController::class,'store'])->name('store');
+    Route::get('edit/{id}',[ProtfolliowController::class,'edit'])->name('edit');
+    Route::put('update',[ProtfolliowController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[ProtfolliowController::class,'delete'])->name('delete');
+
+});
+
+
+//Image Retouching Page Routes
+
+Route::prefix('image-retouching')->name('retouching.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[ImageRetouchingController::class,'index'])->name('index');
+    Route::get('create',[ImageRetouchingController::class,'create'])->name('create');
+    Route::post('store',[ImageRetouchingController::class,'store'])->name('store');
+    Route::get('edit/{id}',[ImageRetouchingController::class,'edit'])->name('edit');
+    Route::put('update',[ImageRetouchingController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[ImageRetouchingController::class,'delete'])->name('delete');
+
+});
+
+//Background Remove Page Routes
+
+Route::prefix('background-remove')->name('background.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[BackgroundRemoveController::class,'index'])->name('index');
+    Route::get('create',[BackgroundRemoveController::class,'create'])->name('create');
+    Route::post('store',[BackgroundRemoveController::class,'store'])->name('store');
+    Route::get('edit/{id}',[BackgroundRemoveController::class,'edit'])->name('edit');
+    Route::put('update',[BackgroundRemoveController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[BackgroundRemoveController::class,'delete'])->name('delete');
+
+});
+
+//Photo Resizing Page Routes
+
+Route::prefix('photo-resizing')->name('photo.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[PhotoResizingController::class,'index'])->name('index');
+    Route::get('create',[PhotoResizingController::class,'create'])->name('create');
+    Route::post('store',[PhotoResizingController::class,'store'])->name('store');
+    Route::get('edit/{id}',[PhotoResizingController::class,'edit'])->name('edit');
+    Route::put('update',[PhotoResizingController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[PhotoResizingController::class,'delete'])->name('delete');
+
+});
+
+
+//Color Correction Page Routes
+
+Route::prefix('color-correction')->name('color.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[ColorCorrectionController::class,'index'])->name('index');
+    Route::get('create',[ColorCorrectionController::class,'create'])->name('create');
+    Route::post('store',[ColorCorrectionController::class,'store'])->name('store');
+    Route::get('edit/{id}',[ColorCorrectionController::class,'edit'])->name('edit');
+    Route::put('update',[ColorCorrectionController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[ColorCorrectionController::class,'delete'])->name('delete');
+
+});
+
+
+//Logo Design Page Routes
+
+Route::prefix('logo-design')->name('logo.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[LogoDesignController::class,'index'])->name('index');
+    Route::get('create',[LogoDesignController::class,'create'])->name('create');
+    Route::post('store',[LogoDesignController::class,'store'])->name('store');
+    Route::get('edit/{id}',[LogoDesignController::class,'edit'])->name('edit');
+    Route::put('update',[LogoDesignController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[LogoDesignController::class,'delete'])->name('delete');
+
+});
+
+
+//Raster To Vector Page Routes
+
+Route::prefix('raster-to-vector')->name('raster.')->middleware('admin.auth')->group(function(){
+    Route::get('/manage',[RasterToVectorController::class,'index'])->name('index');
+    Route::get('create',[RasterToVectorController::class,'create'])->name('create');
+    Route::post('store',[RasterToVectorController::class,'store'])->name('store');
+    Route::get('edit/{id}',[RasterToVectorController::class,'edit'])->name('edit');
+    Route::put('update',[RasterToVectorController::class,'update'])->name('update');
+    Route::delete('delete/{id}',[RasterToVectorController::class,'delete'])->name('delete');
 
 });
 
