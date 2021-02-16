@@ -48,20 +48,65 @@
                                 <tbody>
 
 
-
-
                                 @foreach($all as $al)
-                                    <tr class="text-center">
+                                    <br class="text-center">
+                                    @php
+                                    $sk = explode(' ',$al->time);
+                                    $pk = $sk[0];
+                                    $date = date_create();
+                                    $sks = date_add($date, date_interval_create_from_date_string($al->time));
+                                    $pkk = date_format($date, 'Y-m-d');
+
+
+
+                                    @endphp
+
+                                            <script>
+                      // Set the date we're counting down to
+
+                      var countDownDate = new Date('<?php echo $pkk ?>').getTime();
+
+                      // Update the count down every 1 second
+                      var x = setInterval(function() {
+
+                        // Get today's date and time
+                        var now = new Date().getTime();
+
+
+                        // Find the distance between now and the count down date
+                        var distance = countDownDate - now;
+
+
+
+                      //   // Time calculations for days, hours, minutes and seconds
+                         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                      //    document.getElementById('demo').innerHTML=days;
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                      //   // Display the result in the element with id="demo"
+                          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                              + minutes + "m " + seconds + "s ";
+
+                      //   // If the count down is finished, write some text
+                        if (distance < 0) {
+                          clearInterval(x);
+                          document.getElementById("demo").innerHTML = "EXPIRED";
+                        }
+                      }, 1000);
+                      </script>
+
 
                                         <td>10{{$al->id}}</td>
                                         <td>{{$al->service->name}}</td>
                                         <td>{{$al->amount}}$</td>
-                                        <td>{{$al->time}}</td>
+
+                                        <td id="demo"></td></br>
                                         <td>{{$al->status == 1 ? 'Complete' : 'Pending'}}</td>
                                         <td>
 
                                                 <a href="{{route('order.allSoftDelete',$al->id)}}">{{$al->status ==1 ? '' : 'Cancel'}}</a>
-
 
                                         </td>
 

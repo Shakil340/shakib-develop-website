@@ -65,10 +65,7 @@
 
                                 @foreach($subTitle as $sub)
 
-
-                             <li>{{$sub->name }}</li>
-
-
+                             <li>{{$sub->home_services_id  == $homeService->id ? $sub->name : ''}}</li>
 
                                 @endforeach
 
