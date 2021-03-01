@@ -5,7 +5,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="clipping-path">
                         <h4>Image masking Services:</h4>
                         <p>We generally use our own image masking tools & technology</p>
@@ -26,13 +26,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 ">
                     <div class="clipping-image">
                         <img src="{{asset('Inc/Frontend')}}/img/image-masking (4).jpg" alt="" />
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6 ">
                     <div class="clipping-image">
                         <img src="{{asset('Inc/Frontend')}}/img/image-masking (1).jpg" alt="" />
                     </div>
@@ -46,7 +46,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="clipping-path-para">
                         <p>
                             Image quality models usually include a mechanism whereby artifacts are masked by the image
@@ -67,13 +67,13 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6">
                     <div class="clipping-image">
                         <img src="{{asset('Inc/Frontend')}}/img/image-masking (3).jpg" alt="" />
                     </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6">
                     <div class="clipping-img">
                         <img src="{{asset('Inc/Frontend')}}/img/image-masking (2).jpg" style="min-height: 390px;" alt="" />
                     </div>
@@ -87,7 +87,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="clipping-path-ul">
 
 
@@ -126,14 +126,14 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="text-center">
                         <h3>See the Package for image/Layer Masking</h3>
                     </div>
                 </div>
 
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
@@ -152,7 +152,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
@@ -171,7 +171,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">

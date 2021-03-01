@@ -5,7 +5,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="image-resizing">
                         <h3> Photo Resizing Services</h3>
                         <p>
@@ -69,14 +69,14 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="text-center">
                         <h3>See the Package for image Resizing</h3>
                     </div>
                 </div>
 
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
@@ -95,7 +95,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
@@ -114,7 +114,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
@@ -142,7 +142,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="resizing-botton">
                         <h3> Why it is important to resize image?</h3>
                         <p>The reason why you should resize images if you plan to load images to the Internet for

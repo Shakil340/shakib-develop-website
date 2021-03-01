@@ -134,18 +134,18 @@
     <section class="recent-bg" >
         <div class="container" style="max-width: 100% !important;">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-xl-12">
                     <div class="recent-work text-center">
                         <h4>Recent Works</h4>
                         <p> Some of our recent works:</p>
                     </div>
                 </div>
-                <div class="recent-images d-flex">
+                <div class="recent-images d-flex col-sm-12 ">
                     @php
                     use App\Models\RecentWork;$recents = RecentWork::latest()->where('status',1)->take(5)->get();
                     @endphp
                     @foreach($recents as $recent)
-                    <div class="recent-image position-relative" >
+                    <div class="recent-image position-relative col-sm-4" >
 
                         <img src="{{asset('uploads/image/'.$recent->thumbnail)}}" alt="" style="width: 255px; height: 255px">
 

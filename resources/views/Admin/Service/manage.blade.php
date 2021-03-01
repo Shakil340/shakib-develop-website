@@ -26,7 +26,7 @@
                 <div class="row">
 
                     <!-- /.col -->
-                    <div class="card  col-md-12">
+                    <div class="card  col-md-12 col-sm-12">
                         <div class="card-header">
                             <h3 class="card-title">Complete Order List</h3>
                         </div>

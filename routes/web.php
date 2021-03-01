@@ -53,7 +53,8 @@ use App\Http\Controllers\Admin\SliderController;
 //});
 
 
-Auth::routes();
+// Auth::routes(['verify' => true]);
+ Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeServiceController::class, 'index'])->name('home');
 
@@ -198,7 +199,7 @@ Route::prefix('slider/')->name('slider.')->middleware('admin.auth')->group(funct
 //HomeService Page Routes
 
 Route::prefix('home-service')->name('home_service.')->middleware('admin.auth')->group(function(){
-    Route::get('/manage',[HomeServiceController::class,'index'])->name('index');
+    Route::get('/manage',[HomeServiceController::class,'search'])->name('index');
     Route::get('/create',[HomeServiceController::class,'create'])->name('create');
     Route::post('/store',[HomeServiceController::class,'store'])->name('store');
 });
@@ -370,15 +371,14 @@ Route::prefix('user')->name('user.')->group(function(){
 });
 
 //Free-Trial Page Routes
+Route::prefix('free-trial')->name('free-trial.')->group(function (){
+    Route::middleware('admin.auth')->group(function(){
+        Route::get('/manage',[FreeTrialController::class,'index'])->name('index');
 
-Route::prefix('free-trial')->name('free-trial.')->middleware('admin.auth')->group(function(){
-    Route::get('/manage',[FreeTrialController::class,'index'])->name('index');
+        Route::get('/single/{id}',[FreeTrialController::class,'single'])->name('single');
+        Route::get('/download/{id}',[FreeTrialController::class,'download'])->name('download');
+});
     Route::post('/store',[FreeTrialController::class,'store'])->name('store');
-    Route::get('/single/{id}',[FreeTrialController::class,'single'])->name('single');
-    Route::get('/download/{id}',[FreeTrialController::class,'download'])->name('download');
-
-
-
 });
 
 

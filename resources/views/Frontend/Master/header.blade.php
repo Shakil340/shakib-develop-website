@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{asset('Inc/Frontend')}}/css/demo.css">
 
     <link rel="stylesheet" href="{{asset('Inc/Frontend')}}/css/style.css" />
+    <link rel="stylesheet" href="{{asset('Inc/Frontend')}}/css/responsive.css" />
 </head>
 
 <body style="margin: 0px">

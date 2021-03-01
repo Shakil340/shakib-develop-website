@@ -6,7 +6,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="clipping-path">
                         <h4>Image Retouching:</h4>
                         <p>Image Retouching is a useful & excellent image service. Through this service we can remove
@@ -17,8 +17,8 @@
                     </div>
                 </div>
 
-                <div class="clipping-image mb-20">
-                    <img src="{{asset('Inc/Frontend')}}/img/retouching Iamge.jpg" style="width: 1240px;" alt="">
+                <div class="clipping-image mb-20 col-md-12 col-sm-12 col-lg-12 col-xl-12">
+                    <img src="{{asset('Inc/Frontend')}}/img/retouching Iamge.jpg"  alt="">
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="clipping-path-para">
+                <div class="clipping-path-para col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <p>Image retouching is an essential art by which we can easily make any images glorious. Image
                         retouching is probably one of the most popular applications of all. There are two simple reasons
                         for image retouching. First, Photoshop offers advanced tools to smooth out skin and hair and
@@ -44,8 +44,8 @@
                     <br>
 
 
-                    <div class="clipping-image">
-                        <img src="{{asset('Inc/Frontend')}}/img/retouching image 2.jpg" style="width: 1240px;" alt="">
+                    <div class="clipping-image ">
+                        <img src="{{asset('Inc/Frontend')}}/img/retouching image 2.jpg"  alt="">
                     </div>
 
 
@@ -79,14 +79,14 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12 col-lg-12 col-xl-12">
                     <div class="text-center">
                         <h3>See the Package for image Retouching</h3>
                     </div>
                 </div>
 
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
@@ -105,7 +105,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">
@@ -124,7 +124,7 @@
 
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="image-box">
                         <img src="{{asset('Inc/Frontend')}}/img/image manipulation (3).jpg" alt="">
                         <div class="image-box-botton">

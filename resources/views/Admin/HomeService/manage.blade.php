@@ -12,8 +12,19 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-{{--                            <li class="breadcrumb-item"><a href="{{route('order-now')}}">Dashboard</a></li>--}}
+
+
+
                             <li class="breadcrumb-item active">Complete Order</li>
+
+                            <li class="breadcrumb-item active">
+                                <form action="{{ route('home_service.index') }}" method="GET">
+                                @csrf
+                                <input type="search" name="search" id="search"> <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                                </form>
+
+
+                            </li>
                         </ol>
                     </div>
                 </div>
