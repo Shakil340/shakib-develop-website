@@ -145,7 +145,7 @@
                     use App\Models\RecentWork;$recents = RecentWork::latest()->where('status',1)->take(5)->get();
                     @endphp
                     @foreach($recents as $recent)
-                    <div class="recent-image position-relative col-sm-4" >
+                    <div class="recent-image position-relative col-xs-3" >
 
                         <img src="{{asset('uploads/image/'.$recent->thumbnail)}}" alt="" style="width: 255px; height: 255px">
 

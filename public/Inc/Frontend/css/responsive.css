@@ -1,0 +1,52 @@
+@media(max-width:991px){
+    .res-nav{
+        margin-left: 170px !important;
+    }
+
+    .res-nav2{
+        margin-left: 118px !important;
+    }
+}
+
+@media(max-width:767px){
+    .widget{
+        margin-bottom: 30px;
+    }
+    .copyright p.text-center {
+        margin-right: 350px;
+    }
+    .navbar-toggler{
+        background-color: blue;
+        position: absolute;
+        right: 0;
+        top: 7px;
+    }
+    button{
+        border: none;
+    }
+    .navbar-toggler{
+        border: none;
+        line-height: 1.3;
+    }
+    button:hover{
+        background: blue;
+        border: none;
+    }
+    .navbar{
+        justify-content: center;
+    }
+}
+@media(max-width:315px){
+    .widget{
+        margin-bottom: 30px;
+    }
+    .copyright p.text-center {
+        margin-bottom: 90px;
+        margin-top: 0px;
+        font-size: 20px;
+        margin-right: 0;
+    }
+    .payment img{
+        width: 135px !important;
+    }
+}

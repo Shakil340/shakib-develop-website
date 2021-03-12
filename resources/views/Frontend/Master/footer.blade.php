@@ -3,8 +3,8 @@
     <div class="container">
         <div class="footer-widget">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="widget">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget ">
                         <h4>OUR MAIN SERVICES</h4>
                         <ul>
                             <li><a href="{{route('service.logo-design')}}">Logo Design</a></li>
@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6">
                     <div class="widget">
                         <h4>IMPORTANT LINKS</h4>
                         <ul>
@@ -33,7 +33,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6">
                     <div class="widget">
                         <h4> MARKETING & SUPPORT</h4>
                         <ul class="social-link">
@@ -52,10 +52,9 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 col-sm-6">
                     <div class="widget">
                         <h4> ABOUT US</h4>
-                        <a href="#" class="top">Scroll Top</a>
                         <p>Graphicsdesignpoint is a One Stop Solution of your all Graphic Design need. There are a
                             lot
                             of design firms or providers on the globe but not each every one send back excellent

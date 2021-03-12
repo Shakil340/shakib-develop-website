@@ -25,12 +25,12 @@
 <body style="margin: 0px">
 <header class="bg-danger bg-header header">
     <div class="container" style="max-width: 1300px !important;">
-        <nav class="navbar navbar-expand-lg ">
+        <nav class="navbar navbar-expand-md ">
             <a class="navbar-brand" href="{{route('home')}}"><img style="width: 110px;" src="{{asset('Inc/Frontend/')}}/img/skl.png" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"><i class="fas fa-bars    "></i></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -113,12 +113,12 @@
                         <a class="nav-link" href="{{route('about-us')}}">About</a>
                     </li>
                     @guest
-                    <li class="nav-item padd" style="margin-left: 250px; ">
+                    <li class="nav-item padd res-nav" style="margin-left: 250px; ">
                         <a class="nav-link" style="background: #428bca; " href="{{route('login')}}">Login/Register</a>
                     </li>
 
                     @else
-                        <li class="nav-item padd" style="margin-left: 190px ">
+                        <li class="nav-item padd res-nav2" style="margin-left: 190px ">
                             <a class="nav-link" style="background: #428bca; " href="{{route('order-now')}}">Dashboard</a>
                         </li>
                         <form method="POST" action="{{ route('logout') }}">
@@ -134,11 +134,11 @@
                     @endguest
 
                 </ul>
-                <form class="form-inline  p-relative">
+                {{-- <form class="form-inline  p-relative">
                     <input class="form-control"  type="search" placeholder="Search"
                             />
                     <button class="btn bsk" type="submit"><i class="fas fa-search"></i></button>
-                </form>
+                </form> --}}
             </div>
         </nav>
     </div>
