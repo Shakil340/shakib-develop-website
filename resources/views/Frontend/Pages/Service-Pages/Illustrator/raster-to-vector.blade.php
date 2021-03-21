@@ -55,6 +55,8 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
+
                 <div class="clipping-path-para">
                     <p> As an image & design services provider company, graphicsdesignpoint can help you to supply best,
                         perfect and excellent quality of images using raster to vector conversion service. Because our
@@ -81,6 +83,7 @@
 
 
                 </div>
+            </div>
             </div>
         </div>
     </section>

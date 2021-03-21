@@ -111,12 +111,14 @@
                     </div>
 
                 </div>
+                <div class="col-md-12">
                 <p>And also might be a circumstance if you would like convince somebody with an attractive collage or
                     even help to make stunning images for illustration. With the growth and development of digital
                     camera and illustrations or photos applications it has grown to be convenient to fix the problems,
                     in case, if an individual employs it proficiently. It accordingly can happen that the imagine is a
                     great one, on the other hand shadow and lighting is of poor quality. These artistic means add value
                     and color both to the Photographs.</p>
+                </div>
 
             </div>
         </div>

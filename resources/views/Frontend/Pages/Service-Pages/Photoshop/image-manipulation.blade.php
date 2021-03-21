@@ -6,6 +6,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation">
                     <h3 style="margin-top: 25px;"> Image Manipulation</h3>
                     <p> Image Manipulation is a service that is popular all over the world right now.Image manipulation
@@ -41,6 +42,7 @@
                     <img src="{{asset('Inc/Frontend')}}/img/image manipulation (1).jpg" alt="">
 
                 </div>
+                </div>
             </div>
         </div>
     </section>
@@ -48,6 +50,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation-button">
                     <h3> Why Image Manipulation Is so Important.</h3>
                     <p> Photo manipulation has been used to deceive or persuade viewers or improve storytelling and
@@ -75,6 +78,7 @@
 
 
 
+                </div>
                 </div>
             </div>
         </div>
@@ -158,6 +162,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation-button">
                     <h3> Digital image manipulation</h3>
                     <p>     Digital image manipulation is widely used for e-commerce websites. They need to show the product neat, clean, and
@@ -177,6 +182,7 @@
 
 
 
+                </div>
                 </div>
             </div>
         </div>

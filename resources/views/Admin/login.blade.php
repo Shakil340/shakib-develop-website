@@ -20,7 +20,7 @@
                 <div class="bak-img" style="min-height: 625px;">
                     <div class="login-wrap" >
                         <div class="logo">
-                            <a href="#">
+                            <a href="{{ route('home') }}">
 
                                 <img src="{{asset('Inc/Frontend/')}}/img/skl.png" alt="" width="37%">
                             </a>

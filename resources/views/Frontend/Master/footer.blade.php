@@ -7,13 +7,13 @@
                     <div class="widget ">
                         <h4>OUR MAIN SERVICES</h4>
                         <ul>
-                            <li><a href="{{route('service.logo-design')}}">Logo Design</a></li>
-                            <li><a href="{{route('service.business-card-design')}}">Bussiness Card Design</a></li>
-                            <li><a href="{{route('service.ads-design')}}">Baner Design</a></li>
-                            <li><a href="{{route('service.clipping-path')}}">Image Clipping Path</a></li>
-                            <li><a href="{{route('service.image-retouching')}}">Image Retouching</a></li>
-                            <li><a href="{{route('service.image-manipulation')}}">Image Manipulation</a></li>
-                            <li><a href="{{route('service.photo-resizing')}}">Image Resizing</a></li>
+                            <li><a href="{{route('service.illustrator.logo-design')}}">Logo Design</a></li>
+                            <li><a href="{{route('service.illustrator.business-card-design')}}">Bussiness Card Design</a></li>
+                            <li><a href="{{route('service.illustrator.ads-design')}}">Baner Design</a></li>
+                            <li><a href="{{route('service.photoshop.clipping-path')}}">Image Clipping Path</a></li>
+                            <li><a href="{{route('service.photoshop.image-retouching')}}">Image Retouching</a></li>
+                            <li><a href="{{route('service.photoshop.image-manipulation')}}">Image Manipulation</a></li>
+                            <li><a href="{{route('service.photoshop.photo-resizing')}}">Image Resizing</a></li>
                             <li><a href="other.html">Other</a></li>
                         </ul>
                     </div>

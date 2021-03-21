@@ -1,16 +1,37 @@
 (function ($){
     $(document).ready(function (){
 
-            // $('.dropdown-menu2').hide();
-            // $('#navbarDropdown').click(function () {
-            //     $('ul.dropdown-menu2 ').toggle();
+        //Responsive Navication Menu
+            var responsive = $(window).width();
 
-            // });
-            // $('.dropdown-menu3').hide();
-            // $('#navbardropdown').click(function () {
-            //     $(' .dropdown-menu3').toggle();
+            if(responsive <=767 ){
+                $('ul>li>ul').removeClass('dropdown-menu2');
+                $('ul>li>ul>li>ul').removeClass('dropdown-menu3 dropdown-menu4');
+            }else{
+                $('.navbar-nav>li:nth-child(2)>.nav-link').attr('href','javascript:void(0)');
+                $('.navbar-nav>li>ul>li:nth-child(1)>.dropdown-item').attr('href','javascript:void(0)');
+                $('.navbar-nav>li>ul>li:nth-child(2)>.dropdown-item').attr('href','javascript:void(0)');
+            }
 
-            // });
+            $(window).resize(function(){
+                var responsive = $(window).width();
+                if(responsive <=767 ){
+                    $('ul>li>ul').removeClass('dropdown-menu2');
+                    $('ul>li>ul>li>ul').removeClass('dropdown-menu3 dropdown-menu4');
+                    $('.navbar-nav>li:nth-child(2)>.nav-link').attr('href','#multiCollapseExample1');
+                    $('.navbar-nav>li>ul>li:nth-child(1)>.dropdown-item').attr('href','#multiCollapseExample2');
+                    $('.navbar-nav>li>ul>li:nth-child(2)>.dropdown-item').attr('href','#multiCollapseExample3');
+                }else{
+                    $('.navbar-nav>li>ul').addClass('dropdown-menu2');
+                    $('.navbar-nav>li:nth-child(2)>.nav-link').attr('href','javascript:void(0)');
+                    $('ul>li>ul>li:first-child>ul').addClass('dropdown-menu3');
+                    $('.navbar-nav>li>ul>li:nth-child(1)>.dropdown-item').attr('href','javascript:void(0)');
+                    $('.navbar-nav>li>ul>li:nth-child(2)>.dropdown-item').attr('href','javascript:void(0)');
+                    $('ul>li>ul>li:nth-child(2)>ul').addClass('dropdown-menu4');
+                   
+                }
+            });
+
 
 //Home page js start
 

@@ -29,7 +29,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mb-sm-2">
                     <div class="clipping-image">
                         <img src="{{asset('Inc/Frontend')}}/img/clipping path (1).jpg" alt="">
                     </div>
@@ -50,6 +50,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="clipping-path-para">
                     <p>clipping path services is a type of shape that is commonly used in eCommerce photo editing and
                         photography software to cut 2D images. It is a powerful tool that will truly fall in love with
@@ -70,6 +71,7 @@
                         can be possible to create an attractive & fresh image where mainly used image clipping path
                         service.</p>
 
+                </div>
                 </div>
             </div>
         </div>

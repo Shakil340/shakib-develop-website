@@ -127,8 +127,9 @@ Route::get('/about-us', function () {
 //Menu Drop-Down page Routes
 
 
+Route::group(['prefix'=>'service','as'=>'service.'], function(){
 
-Route::prefix('/service')->name('service.')->group(function(){
+Route::prefix('photoshop')->name('photoshop.')->group(function(){
 
     // ++++++Photoshop Routes
 
@@ -160,8 +161,10 @@ Route::prefix('/service')->name('service.')->group(function(){
         return view('Frontend.Pages.Service-Pages.Photoshop.background-remove');
     })->name('background-remove');
 
+});
 
 
+Route::prefix('illustrator')->name('illustrator.')->group(function(){
     //++++++++++Illustrator Page Routes
 
     Route::get('/logo-design', function () {
@@ -179,10 +182,8 @@ Route::prefix('/service')->name('service.')->group(function(){
     Route::get('/raster-to-vector', function () {
         return view('Frontend.Pages.Service-Pages.Illustrator.raster-to-vector');
     })->name('raster-to-vector');
-
-
 });
-
+});
 
 //Slider Page Routes
 

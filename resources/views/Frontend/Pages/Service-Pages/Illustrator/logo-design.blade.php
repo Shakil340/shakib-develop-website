@@ -5,6 +5,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation">
                     <h3 style="margin-top: 25px;"> Logo Design Services</h3>
                     <p> Logo design is one of the most essential design services. It helps a company to easily introduce
@@ -15,6 +16,7 @@
                         get
                         best and excellent logo design service.</p>
                 </div>
+                </div>
             </div>
         </div>
     </section>
@@ -23,25 +25,25 @@
             <div class="row">
 
 
-                <div class="col-md-3">
+                <div class="col-md-3 mb-sm-3">
                     <div class="logo-image">
                         <img src="{{asset('Inc/Frontend')}}/img/logo (1).jpg" alt="">
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 mb-sm-3">
                     <div class="logo-image">
                         <img src="{{asset('Inc/Frontend')}}/img/logo (2).png" style="background-color: #000;" alt="">
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 mb-sm-3">
                     <div class="logo-image">
                         <img src="{{asset('Inc/Frontend')}}/img/logo (3).png" style="background-color: #c1bcbc" alt="">
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-3 mb-sm-3">
                     <div class="logo-image">
                         <img src="{{asset('Inc/Frontend')}}/img/logo (2).png" style="background-color: #000;" alt="">
                     </div>
@@ -54,6 +56,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation-button">
                     <p> Your logo is you or your business' first point of contact with the outside world. If people
                         connect with your branding, the likelihood is they'll be more open to whatever it is offering
@@ -72,6 +75,7 @@
                         commercial brand, or economic or academic entity, and its shapes, colors, fonts, and images
                         usually are different from others in a similar market. Logos are also used to identify
                         organizations and other non-commercial entities.</p>
+                </div>
                 </div>
             </div>
         </div>
@@ -155,6 +159,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation-button">
 
 
@@ -200,6 +205,7 @@
 
 
 
+                </div>
                 </div>
             </div>
         </div>

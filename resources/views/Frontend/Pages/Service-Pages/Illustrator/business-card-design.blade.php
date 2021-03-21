@@ -29,6 +29,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="clipping-path-para">
                     <p>Bussiness Cards Can be in a few steps. Suppose you have a business card for your business, and
                         you have a personal business card for your personal information.Here are two business cards but
@@ -57,6 +58,7 @@
                     </p>
 
 
+                </div>
                 </div>
             </div>
         </div>

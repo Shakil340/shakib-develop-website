@@ -5,6 +5,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation">
                     <h3 style="margin-top: 25px;"> Ads Design</h3>
                     <p>It refers to the visual artwork created specifically for advertisements (or, simply, “ads”). Ad
@@ -26,10 +27,11 @@
                         provide
                         perfect ad design service which is highly praised all around the world.</p>
 
-                    <div class="logo-image">
+                    <div class="logo-image mb-sm-4">
                         <img src="{{asset('Inc/Frontend')}}/img/logo (1).jpg" alt="">
                     </div>
 
+                </div>
                 </div>
             </div>
         </div>
@@ -39,6 +41,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation-button">
 
                     <p> Advertisements help the consumers to make decisions regarding which product and service to buy.
@@ -74,6 +77,7 @@
 
 
                 </div>
+                </div>
             </div>
         </div>
     </section>
@@ -83,6 +87,7 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
                 <div class="manipulation-button">
 
                     <p>
@@ -98,6 +103,7 @@
                         send
                         you’re your ad design problems to us and you can enjoy your days according to your wish</p>
 
+                </div>
                 </div>
             </div>
         </div>

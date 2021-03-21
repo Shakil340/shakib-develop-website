@@ -90,7 +90,7 @@
         <div class="container" style="max-width: 100% !important;">
 
             <div class="row">
-                <div class="col-md-4 wid-35">
+                <div class="col-6 col-md-4 wid-35">
                     <div class="our-price">
                         <h4>Our Main Services Starting Price List</h4>
 
@@ -109,7 +109,7 @@
                 </div>
 
 
-                <div class="col-md-4 wid-32">
+                <div class="col-md-4 col-6 wid-32">
                     <div class="our-price text-center">
                         <i class="fa fa-truck" aria-hidden="true"></i>
                         <h4>Same Day Delivery</h4>
@@ -119,7 +119,7 @@
                 </div>
 
 
-                <div class="col-md-4 wid-32">
+                <div class="col-md-4 col-6 wid-32">
                     <div class="our-price text-center">
                         <i class="fa fa-dollar-sign" aria-hidden="true"></i>
                         <h4>Same Day Delivery</h4>
@@ -169,7 +169,7 @@
     <section class="our-shak-bg" style="background-image: url('{{asset('Inc/Frontend')}}/img/pc.jpg')">
         <div class="container" style="max-width: 100% !important;">
             <div class="row">
-                <div class="col-md-12">
+                <div class=" col-md-12">
                     <div class="text-center">
                         <h3>OUR SNEAK PIC</h3>
                         <p>Graphicsdesignpoint Is A One Stop Stop Stop</p>
@@ -180,7 +180,7 @@
                 use App\Models\Expert;$experts = Expert::latest()->where('status',1)->take(6)->get();
                 @endphp
                 @foreach($experts as $expert)
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-4 col-6">
                     <div class="text-center our-shark">
                         <h3>{{substr($expert->title,0,5)}}</h3>
                         <h4>{{substr($expert->subTitle, 0,15)}}</h4>
@@ -189,7 +189,7 @@
                 @endforeach
 
 
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="our-order text-center">
                         <a href="{{route('free-trial')}}" class="text-white">
                             <h4>Free Trial</h4>
@@ -198,7 +198,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 col-mar" >
                     <div class="our-order text-center">
                         <a href="{{route('contact-us')}}" class="text-white">
                             <h4>Contact Us</h4>
@@ -208,7 +208,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-12 col-mt col-mar">
                     <div class="our-order text-center">
                         <a href="{{route('order-now')}}" class="text-white">
                             <h4>Place new order</h4>
