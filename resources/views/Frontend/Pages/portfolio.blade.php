@@ -16,23 +16,23 @@
                         @foreach($protfollios as $protfolliow)
 
 
-                        <a href="{{asset('uploads/image/'.$protfolliow->img1)}}" data-fancybox="gallery">
-                            <img src="{{asset('uploads/image/'.$protfolliow->img1)}}" alt="" />
+                        <a href="{{$protfolliow->img1}}" data-fancybox="gallery">
+                            <img src="{{$protfolliow->img1}}" alt="" />
 
                         </a>
 
-                            <a href="{{asset('uploads/image/'.$protfolliow->img2)}}" data-fancybox="gallery">
-                            <img src="{{asset('uploads/image/'.$protfolliow->img2)}}" alt="" />
+                            <a href="{{$protfolliow->img2}}" data-fancybox="gallery">
+                            <img src="{{$protfolliow->img2}}" alt="" />
 
                         </a>
 
-                            <a href="{{asset('uploads/image/'.$protfolliow->img3)}}" data-fancybox="gallery">
-                            <img src="{{asset('uploads/image/'.$protfolliow->img3)}}" alt="" />
+                            <a href="{{$protfolliow->img3}}" data-fancybox="gallery">
+                            <img src="{{$protfolliow->img3}}" alt="" />
 
                         </a>
 
-                            <a href="{{asset('uploads/image/'.$protfolliow->img4)}}" data-fancybox="gallery">
-                            <img src="{{asset('uploads/image/'.$protfolliow->img4)}}" alt="" />
+                            <a href="{{$protfolliow->img4}}" data-fancybox="gallery">
+                            <img src="{{$protfolliow->img4}}" alt="" />
                         </a>
 
 

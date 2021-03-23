@@ -38,7 +38,7 @@
 
                             <form method="post" action="{{route('order.store')}}"  class="free-bg-drag" enctype="multipart/form-data">
                                 @csrf
-                                <div class="col-md-6 drag-50" style="float: left">
+                                <div class="col-md-6 col-sm-12 drag-50" style="float: left">
 
                                     <h5 class="text-center" style="margin-top: 2px;">Multiple file must be compressed (zip/rar) </h5>
 

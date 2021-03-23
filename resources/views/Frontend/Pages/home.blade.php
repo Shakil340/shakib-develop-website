@@ -140,24 +140,28 @@
                         <p> Some of our recent works:</p>
                     </div>
                 </div>
-                <div class="recent-images d-flex col-sm-12 ">
+                <div class=" col-sm-12 ">
                     @php
-                    use App\Models\RecentWork;$recents = RecentWork::latest()->where('status',1)->take(5)->get();
+                    use App\Models\RecentWork;$recents = RecentWork::latest()->where('status',1)->get();
                     @endphp
+             <div class=" recent-slider" >
                     @foreach($recents as $recent)
-                    <div class="recent-image position-relative col-xs-3" >
 
-                        <img src="{{asset('uploads/image/'.$recent->thumbnail)}}" alt="" style="width: 255px; height: 255px">
+                        <div class="position-relative" style="width: 255px ; height:255px ">
+                        <img src="{{asset('uploads/image/'.$recent->thumbnail)}}" alt="" style="width: 255px ; height:255px">
 
                         <div class="recent-content position-absolute">
                             <h6 class="text-center mr">{{substr($recent->title, 0,10)}} </h6>
                         </div>
 
-                    </div>
+                        </div>
+
+
+
 
                     @endforeach
 
-
+            </div>
 
 
                 </div>

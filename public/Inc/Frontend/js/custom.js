@@ -28,7 +28,7 @@
                     $('.navbar-nav>li>ul>li:nth-child(1)>.dropdown-item').attr('href','javascript:void(0)');
                     $('.navbar-nav>li>ul>li:nth-child(2)>.dropdown-item').attr('href','javascript:void(0)');
                     $('ul>li>ul>li:nth-child(2)>ul').addClass('dropdown-menu4');
-                   
+
                 }
             });
 
@@ -64,12 +64,85 @@
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
-                pauseOnHover: false
+                pauseOnHover: false,
+                responsive: [
+                    {
+                      breakpoint: 992,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                      }
+                    },
+                    {
+                      breakpoint: 768,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                      }
+                    },
+                    {
+                      breakpoint: 576,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                      }
+                    },
+                    {
+                        breakpoint: 386,
+                        settings: {
+                          slidesToShow: 1,
+                          slidesToScroll: 1
+                        }
+                      }
+                  ]
             });
             $('.slick-next').html('<i class="fas fa-chevron-right"></i>');
             $('.slick-prev').html('<i class="fas fa-chevron-left"></i>');
 
             // Portfolio js end
+
+
+            // recent js start
+
+            $('.recent-slider').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                pauseOnHover: false,
+                responsive: [
+                    {
+                      breakpoint: 992,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                      }
+                    },
+                    {
+                      breakpoint: 767,
+                      settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                      }
+                    },
+                    {
+                      breakpoint: 576,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+
+                      }
+                    }
+                  ]
+            });
+            $('.slick-next').html('<i class="fas fa-chevron-right"></i>');
+            $('.slick-prev').html('<i class="fas fa-chevron-left"></i>');
+
+            // recent js end
 
 
 

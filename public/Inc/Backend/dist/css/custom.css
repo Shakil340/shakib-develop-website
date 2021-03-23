@@ -190,3 +190,49 @@ ul li form a:hover,ul.d-flex.w-100 li:hover span {
     color: rgba(255,255,255,.75) !important;
     cursor: pointer;
 }
+@media(max-width:991px){
+        /*User Backend Css*/
+
+        section.content.d-flex.res-md-ml {
+            margin-left: 242px !important;
+        }
+        .content-wrapper.res-md-ml {
+            margin-left: 242px !important;
+        }
+}
+@media(max-width:767px){
+        /*User Backend Css*/
+
+        section.content.d-flex.res-md-ml {
+            margin-left: 0px !important;
+        }
+        .drag-50{
+            width: 100% !important;
+            margin: 0;
+        }
+        .form-group.files.color {
+            height: 350px;
+        }
+        .drag-50 h4 {
+
+            left: 43%;
+            top: 53%;
+        }
+        span.drag-icon {
+            left: 50%;
+            top: 33%;
+
+        }
+        .files input {
+            padding: 140px 50px 193px 92px;
+            height: 0px;
+        }
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 22px;
+    color: rgba(255,255,255,.5);
+}
+.navbar-nav .nav-item .nav-link:hover{
+    color: rgba(255,255,255,.75) !important;
+}

@@ -6,6 +6,15 @@
     .res-nav2{
         margin-left: 118px !important;
     }
+    .position-relative.slick-slide img {
+        width: 231px !important;
+    }
+    .position-relative.slick-slide.slick-active, .position-relative.slick-slide {
+        width: 231px !important;
+        margin: 0px 5px !important;
+    }
+
+
 }
 
 @media(max-width:767px){
@@ -131,6 +140,19 @@
     -ms-transition: .5s all;
     -o-transition: .5s all;
 }
+.portfolio-image img {
+    width: 250px;
+    height: 212px;
+    margin: 12px;
+}
+.position-relative.slick-slide.slick-active, .position-relative.slick-slide {
+    width: 236px !important;
+    margin: 0px 5px !important;
+}
+.position-relative.slick-slide img {
+    width: 235px !important;
+
+}
 
 
 }
@@ -146,6 +168,12 @@
     }
     .payment img{
         width: 135px !important;
+    }
+    .portfolio-image img {
+        width: 290px;
+        height: 212px;
+        margin: 12px;
+
     }
 
 }
@@ -195,6 +223,13 @@
     .nav-item.padd.res-nav {
         display: inline-table;
     }
+    .position-relative.slick-slide img {
+        width: 262px !important;
+    }
+    .position-relative.slick-slide.slick-active, .position-relative.slick-slide {
+        width: 262px !important;
+        margin: 0px 5px !important;
+    }
 }
 section.our-shak-bg{
         background-position: center;
@@ -206,4 +241,6 @@ section.our-shak-bg{
 .nav-link:current{
     background-color: chartreuse;
 }
+
+
 
