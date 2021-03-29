@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\FreeTrial;
+use App\Models\User;
 use Faker\Provider\File;
 use http\Env\Response;
 use Illuminate\Http\Request;
@@ -72,4 +73,6 @@ class FreeTrialController extends Controller
             return response()->download($filepath);
 
     }
+
+ 
 }

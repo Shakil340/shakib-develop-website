@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="copyright">
-                        <p class="text-center"> Copyright &#169; 2020 Graphics Design Point </p>
+                        <p class="text-center"> Copyright &#169; {{ date('Y') }} Graphics Design Point </p>
                     </div>
 
                     <ul class="d-flex payment">

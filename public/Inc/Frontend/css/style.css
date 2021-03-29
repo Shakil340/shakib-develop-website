@@ -477,7 +477,7 @@ h2.pd{
 
 .files input {
 
-    padding: 120px 0px 85px 35%;
+    padding: 120px 0px 85px 10%;
     text-align: center !important;
     margin: 0;
     width: 100% !important;
@@ -782,6 +782,7 @@ Portfolio image
 
 img.slick-slide {
     margin: 0px 10px;
+ 
 
 }
 

@@ -17,7 +17,7 @@
                 <img src="{{asset('Inc/backend')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="{{ route('admin.home') }}" class="d-block">{{ Auth::user()->name }}</a>
             </div>
         </div>
 
@@ -27,11 +27,12 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <a href="{{ route('admin.home') }}" class="nav-link {{ request()->routeIs('admin.home') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
-                            <i class="right fas fa-angle-left"></i>
+
                         </p>
                     </a>
                 </li>
@@ -40,7 +41,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link {{ request()->routeIs('slider*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Sliders
@@ -49,13 +50,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('slider.index')}}" class="nav-link">
+                            <a href="{{route('slider.index')}}" class="nav-link {{ request()->routeIs('slider.index') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Manage Slider</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('slider.create')}}" class="nav-link">
+                            <a href="{{route('slider.create')}}" class="nav-link {{ request()->routeIs('slider.create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Slider</p>
                             </a>
@@ -63,7 +64,7 @@
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link {{ request()->routeIs('home_service*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Home Service
@@ -72,13 +73,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('home_service.index')}}" class="nav-link">
+                            <a href="{{route('home_service.index')}}" class="nav-link {{ request()->routeIs('home_service.index') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Manage Service</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('home_service.create')}}" class="nav-link">
+                            <a href="{{route('home_service.create')}}" class="nav-link {{ request()->routeIs('home_service.create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Service</p>
                             </a>
@@ -88,7 +89,7 @@
 
 
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link {{ request()->routeIs('recent_work*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Recent Work
@@ -474,6 +475,4 @@
     </div>
     <!-- /.sidebar -->
 </aside>
-<div class="content-wrapper res-md-ml" style="min-height: 1200.88px;">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
+

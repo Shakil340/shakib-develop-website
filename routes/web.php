@@ -386,8 +386,3 @@ Route::prefix('free-trial')->name('free-trial.')->group(function (){
 
 
 
-
-
-
-
-

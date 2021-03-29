@@ -2,7 +2,7 @@
 
 <footer class="main-footer text-center">
 
-    <strong>Copyright © Reserved By Graphics Design Point 2020-2021 <a href="#">Shakibul Hasan</a>.</strong> Owner Of Graphics Design Point
+    <strong>Copyright © Reserved By Graphics Design Point {{ date('Y') }} <a href="#">Shakibul Hasan</a>.</strong> Owner Of Graphics Design Point
     reserved.
 </footer>
 

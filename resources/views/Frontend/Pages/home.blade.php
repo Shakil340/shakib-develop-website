@@ -144,18 +144,20 @@
                     @php
                     use App\Models\RecentWork;$recents = RecentWork::latest()->where('status',1)->get();
                     @endphp
-             <div class=" recent-slider" >
+             <div class=" center" >
                     @foreach($recents as $recent)
-
-                        <div class="position-relative" style="width: 255px ; height:255px ">
-                        <img src="{{asset('uploads/image/'.$recent->thumbnail)}}" alt="" style="width: 255px ; height:255px">
+                        <div style="margin: 0px 10px !important">
+                       <div class="position-relative" >
+                        <img src="{{$recent->thumbnail}}" alt="" >
 
                         <div class="recent-content position-absolute">
                             <h6 class="text-center mr">{{substr($recent->title, 0,10)}} </h6>
                         </div>
-
                         </div>
 
+
+
+        </div>
 
 
 

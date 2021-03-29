@@ -193,11 +193,9 @@ ul li form a:hover,ul.d-flex.w-100 li:hover span {
 @media(max-width:991px){
         /*User Backend Css*/
 
-        section.content.d-flex.res-md-ml {
-            margin-left: 242px !important;
-        }
-        .content-wrapper.res-md-ml {
-            margin-left: 242px !important;
+
+        section.content{
+            overflow-x: scroll;
         }
 }
 @media(max-width:767px){
@@ -235,4 +233,11 @@ ul li form a:hover,ul.d-flex.w-100 li:hover span {
 }
 .navbar-nav .nav-item .nav-link:hover{
     color: rgba(255,255,255,.75) !important;
+}
+.push:focus{
+    color: rgba(255,255,255,.5) !important;
+
+}
+.sidebar-mini .nav-sidebar, .sidebar-mini .nav-sidebar .nav-link, .sidebar-mini .nav-sidebar > .nav-header {
+    white-space: inherit;
 }

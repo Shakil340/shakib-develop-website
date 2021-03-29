@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Blank Page</title>
+    <title>Graphics Design Point</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,9 +30,9 @@
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+              <a class="nav-link push" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
-    
+
           </ul>
 
         <!-- Right navbar links -->

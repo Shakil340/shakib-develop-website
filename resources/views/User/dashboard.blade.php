@@ -5,21 +5,21 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
 
+                        </div>
                     </div>
-                </div>
-            </div><!-- /.container-fluid -->
-        </section>
+                </div><!-- /.container-fluid -->
+            </section>
 
         <!-- Main content -->
-        <section class="content d-flex res-md-ml">
+        <section class="content ">
 
-
-                <div class="col-xl-3 col-sm-3 col-md-3 col-lg-3 mb-3">
+            <div class="row">
+                <div class="col-xl-3 col-sm-3 col-6 col-md-3 col-lg-3 mb-3">
                     <div class="card text-white bg-primary o-hidden h-100">
                         <div class="card-body">
                             <div class="card-body-icon">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-sm-3 col-md-3 col-lg-3 mb-3">
+                <div class="col-xl-3 col-sm-3 col-6 col-md-3 col-lg-3 mb-3">
                     <div class="card text-white  o-hidden h-100" style="background: #3ab585">
                         <div class="card-body">
                             <div class="card-body-icon">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-3 col-md-3 col-md-3 col-lg-3 col-sm-3 mb-3">
+                <div class="col-xl-3 col-md-3 col-md-3 col-lg-3 col-sm-3 col-6 mb-3">
                     <div class="card text-white  o-hidden h-100" style="background: #543ea0">
                         <div class="card-body">
                             <div class="card-body-icon">
@@ -69,7 +69,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-3 col-sm-3 col-md-3 mb-3 col-lg-3">
+                <div class="col-xl-3 col-sm-3 col-6 col-md-3 mb-3 col-lg-3">
                     <div class="card text-white bg-primary o-hidden h-100">
                         <div class="card-body">
                             <div class="card-body-icon">
@@ -85,12 +85,7 @@
                         </a>
                     </div>
                 </div>
-
-
-
-
-
-
+            </div>
         </section>
         <!-- /.content -->
     </div>

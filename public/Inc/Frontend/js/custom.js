@@ -98,49 +98,74 @@
                       }
                   ]
             });
-            $('.slick-next').html('<i class="fas fa-chevron-right"></i>');
-            $('.slick-prev').html('<i class="fas fa-chevron-left"></i>');
+  
 
             // Portfolio js end
 
 
             // recent js start
 
-            $('.recent-slider').slick({
+            $('.center').slick({
+                centerMode: true,
+                centerPadding: '60px',
                 slidesToShow: 5,
-                slidesToScroll: 1,
-                autoplay: false,
-                autoplaySpeed: 2000,
-                pauseOnHover: false,
                 responsive: [
-                    {
-                      breakpoint: 992,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: false
-                      }
-                    },
-                    {
-                      breakpoint: 767,
-                      settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1
-                      }
-                    },
-                    {
-                      breakpoint: 576,
-                      settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-
-                      }
+                  {
+                    breakpoint: 992,
+                    settings: {
+                      arrows: true,
+                      centerMode: true,
+                      centerPadding: '55px',
+                      slidesToShow: 3
                     }
-                  ]
-            });
+                  },
+
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      arrows: true,
+                      centerMode: true,
+                      centerPadding: '40px',
+                      slidesToShow: 3
+                    }
+                  },
+                       {
+                    breakpoint: 576,
+                    settings: {
+                      arrows: true,
+                      centerMode: true,
+                      centerPadding: '40px',
+                      slidesToShow: 1
+                    }
+                  },
+                  {
+                    breakpoint: 480,
+                    settings: {
+                      arrows: true,
+                      centerMode: true,
+                      centerPadding: '40px',
+                      slidesToShow: 1
+                    }
+                  }
+                ]
+              });
+              var slider = $(window).width();
+              if(slider){
+                $('.slick-next').html('');
+                $('.slick-prev').html('');
             $('.slick-next').html('<i class="fas fa-chevron-right"></i>');
             $('.slick-prev').html('<i class="fas fa-chevron-left"></i>');
+              }
+
+         $(window).resize(function(){
+            var slider = $(window).width();
+            if(slider){
+                $('.slick-next').html('');
+                $('.slick-prev').html('');
+                $('.slick-next').html('<i class="fas fa-chevron-right"></i>');
+                $('.slick-prev').html('<i class="fas fa-chevron-left"></i>');
+            }
+            });
 
             // recent js end
 

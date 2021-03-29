@@ -1,11 +1,10 @@
 @extends('Admin.master.layout')
 
 @section('content')
-
+<div class="content-wrapper " style="min-height: 1200.88px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper res-md-ml">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
@@ -28,5 +27,6 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
+    </section>
+</div>
 @endsection

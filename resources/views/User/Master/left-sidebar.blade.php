@@ -25,7 +25,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
-                    <a href="{{route('order-now')}}" class="nav-link">
+                    <a href="{{route('order-now')}}" class="nav-link {{ request()->routeIs('order-now') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -38,7 +38,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
-                    <a href="{{route('create-order')}}" class="nav-link">
+                    <a href="{{route('create-order')}}" class="nav-link {{ request()->routeIs('create-order') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Create New Order
@@ -48,7 +48,7 @@
 
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="{{route('order.pending')}}" class="nav-link">
+                    <a href="{{route('order.pending')}}" class="nav-link {{ request()->routeIs('order.pending') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Pending Orders
@@ -58,7 +58,7 @@
 
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="{{route('order.complete')}}" class="nav-link">
+                    <a href="{{route('order.complete')}}" class="nav-link {{ request()->routeIs('order.complete') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Complete Orders
@@ -68,7 +68,7 @@
 
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="{{route('order.all')}}" class="nav-link">
+                    <a href="{{route('order.all')}}" class="nav-link {{ request()->routeIs('order.all') ? 'active' : ''}}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             All Orders

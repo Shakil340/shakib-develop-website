@@ -13,6 +13,30 @@
         width: 231px !important;
         margin: 0px 5px !important;
     }
+    .drag-50 h4 {
+        left: 34%;
+        top: 46%;
+        transform: translate(-26%);
+        font-size: 23px;
+    }
+    .image-trial {
+        float: right;
+        width: 47% !important;
+        margin-right: 0;
+    }
+    .files input {
+        padding: 120px 0px 85px 10%;
+            padding-top: 120px;
+        text-align: center !important;
+        margin: 0;
+        width: 100% !important;
+        height: 400px;
+        cursor: pointer;
+        padding-top: 220px;
+        background: none;
+        border: none;
+        opacity: 1;
+    }
 
 
 }
@@ -153,7 +177,19 @@
     width: 235px !important;
 
 }
+.drag-50 h4 {
 
+    left: 15%;
+    top: 47%;
+    transform: translate(0%);
+    font-size: 20px;
+
+}
+.image-trial {
+    float: right;
+    width: 47% !important;
+    margin-right: -20px;
+}
 
 }
 @media(max-width:315px){

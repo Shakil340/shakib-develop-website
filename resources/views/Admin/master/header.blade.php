@@ -29,7 +29,12 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="padding: 15px 0px;background: #343a40">
         <!-- Left navbar links -->
 
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link push" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
 
+          </ul>
         <!-- Right navbar links -->
         <ul class="d-flex w-100" style="justify-content: flex-end; list-style: none; margin: 0px">
 

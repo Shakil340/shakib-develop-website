@@ -25,7 +25,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
-                <div class="card  col-md-9" style="background: #dad9da; padding-bottom: 40px; margin: 0 auto">
+                <div class="card  col-md-12" style="background: #dad9da; padding-bottom: 40px; margin: 0 auto">
                     @if(session()->has('message'))
                         <div class="alert alert-{{session('type')}} alert-dismissible fade show" role="alert">
                             <strong>{{session('message')}}</strong>
